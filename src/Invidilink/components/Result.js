@@ -1,9 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import { nanoid } from 'nanoid';
-import { validateUrl } from '../util';
-import Invidilink from './Invidilink';
-import ClearButton from './ClearButton';
+import React from "react";
+import styled from "styled-components";
+import { nanoid } from "nanoid";
+import { validateUrl } from "../util";
+import Invidilink from "./Invidilink";
 
 const ResultContainer = styled.div`
   border-bottom: 1px solid rgba(0, 0, 0, 0.78);
@@ -23,16 +22,6 @@ const Message = styled.div`
   padding: 16px 0;
 `;
 
-const ButtonRow = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-top: 16px;
-`;
-
-const ButtonContainer = styled.div`
-  margin: 8px;
-`;
-
 function replaceUri(original, replacement) {
   const newUrl = new URL(original);
   const replacementUrl = new URL(replacement);
@@ -41,8 +30,7 @@ function replaceUri(original, replacement) {
 }
 
 export default function Result(props) {
-  const { handleClear, message, url, goodUrls } = props;
-  const clearDisabled = !url.length;
+  const { message, url, goodUrls } = props;
   return (
     <ResultContainer>
       <Display>
@@ -51,16 +39,9 @@ export default function Result(props) {
             <Invidilink link={replaceUri(url, goodUrl)} key={nanoid()} />
           ))
         ) : (
-          <Message>{message || 'the invidious link will appear here'}</Message>
+          <Message>{message || "invidious links will appear here"}</Message>
         )}
       </Display>
-      <ButtonRow>
-        <ButtonContainer>
-          <ClearButton onClick={handleClear} disabled={clearDisabled}>
-            Clear
-          </ClearButton>
-        </ButtonContainer>
-      </ButtonRow>
     </ResultContainer>
   );
 }

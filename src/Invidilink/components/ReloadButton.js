@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-const SubmitContainer = styled.div`
+const ReloadContainer = styled.div`
   align-items: center;
   display: flex;
   height: 48px;
@@ -11,7 +11,7 @@ const SubmitContainer = styled.div`
   vertical-align: middle;
 `;
 
-const SubmitButton = styled.button`
+const ReloadButton = styled.button`
   background: #1b5e20;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
@@ -38,4 +38,4 @@ const SubmitButton = styled.button`
   }
 `;
 
-export { SubmitButton, SubmitContainer };
+export { ReloadButton, ReloadContainer };
