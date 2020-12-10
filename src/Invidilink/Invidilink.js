@@ -52,7 +52,6 @@ function Invidilink() {
 	const [dataTime, setDataTime] = useState(timestamp() - 1000 * 1000);
 	const handleClear = () => {
 		setUrl("");
-		setGoodInstances([]);
 	};
 
 	const handleLinkSubmit = async () => {
