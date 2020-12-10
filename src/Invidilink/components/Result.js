@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { nanoid } from 'nanoid';
 import { validateUrl } from '../util';
 import Invidilink from './Invidilink';
-import CopyButton from './CopyButton';
 import ClearButton from './ClearButton';
 
 const ResultContainer = styled.div`
@@ -42,7 +41,7 @@ function replaceUri(original, replacement) {
 }
 
 export default function Result(props) {
-  const { handleClear, handleCopy, message, url, goodUrls } = props;
+  const { handleClear, message, url, goodUrls } = props;
   const clearDisabled = !url.length;
   return (
     <ResultContainer>
