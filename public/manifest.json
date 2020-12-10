@@ -1,0 +1,15 @@
+{
+  "short_name": "invidi.link",
+  "name": "invidi.link",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "32x32 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "background_color": "#1b1b1b"
+}
