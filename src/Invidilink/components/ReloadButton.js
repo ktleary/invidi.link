@@ -12,10 +12,10 @@ const ReloadContainer = styled.div`
 `;
 
 const ReloadButton = styled.button`
-  background: #1b5e20;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #1b1b1b;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 8px;
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(255, 255, 255, 0.66);
   height: 40px;
   outline: 0;
   width: 60px;

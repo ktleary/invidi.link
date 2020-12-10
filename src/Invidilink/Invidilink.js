@@ -41,29 +41,34 @@ async function getGoodInstances(remoteUrl) {
 function Invidilink() {
     const [url, setUrl] = useState("");
     const [goodInstances, setGoodInstances] = useState([]);
+    const [status, setStatus] = useState("");
     const handleClear = () => {
         setUrl("");
     };
 
     useEffect(() => {
         async function fetchData() {
+            setStatus('Fetching instance data ...');
             const goodInstancesResult = await getGoodInstances();
             setGoodInstances(goodInstancesResult || []);
+            setStatus(`${goodInstancesResult.length} invidious instances found.`);
         }
 
         fetchData();
     }, []);
 
     const handleReloadInstanceData = async () => {
+        setStatus('Fetching instance data ...');
         const goodInstancesResult = await getGoodInstances();
         setGoodInstances(goodInstancesResult || []);
+        setStatus(`${goodInstancesResult.length} invidious instances found.`);
     };
 
     return (
         <InvidilinkWrapper>
             <Header />
             <Entry setUrl={setUrl} url={url} />
-            <Result goodUrls={goodInstances} url={url} />
+            <Result status={status} goodUrls={goodInstances} url={url} />
             <Controls
                 url={url}
                 handleClear={handleClear}

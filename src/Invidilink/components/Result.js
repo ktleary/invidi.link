@@ -17,7 +17,7 @@ const Display = styled.div`
   vertical-align: middle;
 `;
 
-const Message = styled.div`
+const Status = styled.div`
   color: rgba(255, 255, 255, 0.33);
   padding: 16px 0;
 `;
@@ -30,7 +30,7 @@ function replaceUri(original, replacement) {
 }
 
 export default function Result(props) {
-  const { message, url, goodUrls } = props;
+  const { status, url, goodUrls } = props;
   return (
     <ResultContainer>
       <Display>
@@ -39,7 +39,7 @@ export default function Result(props) {
             <Invidilink link={replaceUri(url, goodUrl)} key={nanoid()} />
           ))
         ) : (
-          <Message>{message || "invidious links will appear here"}</Message>
+          <Status>{status}</Status>
         )}
       </Display>
     </ResultContainer>
