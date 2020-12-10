@@ -1,16 +1,18 @@
 # invidi.link
 
-A mobile-first React 17 component to replace URLs with valid invidio.us instances URLs. For example:
+A mobile-first React 17 component to replace URLs with valid invidio.us instances URLs.
 
-Submitted URL: `https://www.youtube.com/watch?v=8D-rWP3c088`
+For example:
+
+Submitted URL: `https://www.youtube.com/watch?v=sbFAcHteZd8`
 Results:
 
-- `https://invidious.snopyta.org/watch?v=8D-rWP3c088`
-- `https://yewtu.be/watch?v=8D-rWP3c088`
-- `https://invidious.tube/watch?v=8D-rWP3c088`
-- `https://invidious.xyz/watch?v=8D-rWP3c088`
-- `https://invidious.kavin.rocks/watch?v=8D-rWP3c088`
-- `https://invidiou.site/watch?v=8D-rWP3c088`
+- `https://invidious.snopyta.org/watch?v=sbFAcHteZd8`
+- `https://invidious.tube/watch?v=sbFAcHteZd8`
+- `https://yewtu.be/watch?v=sbFAcHteZd8`
+- `https://invidious.xyz/watch?v=sbFAcHteZd8`
+- `https://invidious.kavin.rocks/watch?v=sbFAcHteZd8`
+- `https://invidiou.site/watch?v=sbFAcHteZd8`
 
 Features a copy button for easy use on mobile.
 
