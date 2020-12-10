@@ -1,4 +1,4 @@
-# invidilink-react
+# invidi.link
 
 A mobile-first React 17 component to replace URLs with valid invidio.us instances URLs. For example:
 
@@ -15,6 +15,8 @@ Results:
 Features a copy button for easy use on mobile.
 
 API calls may be cached to reduce network calls (default 5 minutes).
+
+In the wild: https://invidi.link/
 
 ## How to run on localhost
 
