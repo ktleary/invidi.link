@@ -13,7 +13,7 @@ const EntryContainer = styled.div`
   vertical-align: middle;
 `;
 
-const placeholder = "Enter a full YouTube or Invidious URL.";
+const placeholder = "Enter YouTube or Invidious URL.";
 
 export default function Entry(props) {
   const { url, setUrl } = props;

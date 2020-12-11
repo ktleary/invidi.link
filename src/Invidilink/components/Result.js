@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { nanoid } from "nanoid";
-import { validateUrl } from "../util";
-import Invidilink from "./Invidilink";
+import Link from "./Link";
 
 const ResultContainer = styled.div`
   border-bottom: 1px solid rgba(0, 0, 0, 0.78);
@@ -17,11 +16,6 @@ const Display = styled.div`
   vertical-align: middle;
 `;
 
-const Status = styled.div`
-  color: rgba(255, 255, 255, 0.33);
-  padding: 16px 0;
-`;
-
 function replaceUri(original, replacement) {
   const newUrl = new URL(original);
   const replacementUrl = new URL(replacement);
@@ -30,33 +24,18 @@ function replaceUri(original, replacement) {
 }
 
 export default function Result(props) {
-  const { status, url, goodUrls } = props;
-  const [linkCopied, setLinkCopied] = useState(false);
-  const handleCopyLink = (link) => {
-    if (!navigator.clipboard) return;
-    navigator.clipboard
-      .writeText(link)
-      .then((_) => {
-        setLinkCopied(true);
-        setTimeout(() => setLinkCopied(false), 2000);
-      })
-      .catch((e) => {});
-  };
+  const { availableInstances, handleCopyLink, url } = props;
+
   return (
     <ResultContainer>
       <Display>
-        {validateUrl(url) && goodUrls.length ? (
-          goodUrls.map((goodUrl) => (
-            <Invidilink
-              handleCopyLink={handleCopyLink}
-              link={replaceUri(url, goodUrl)}
-              key={nanoid()}
-            />
-          ))
-        ) : (
-          <Status>{status}</Status>
-        )}
-        {linkCopied && <Status>link copied!</Status>}
+        {availableInstances.map((goodUrl) => (
+          <Link
+            handleCopyLink={handleCopyLink}
+            link={replaceUri(url, goodUrl)}
+            key={nanoid()}
+          />
+        ))}
       </Display>
     </ResultContainer>
   );

@@ -12,7 +12,7 @@ const CopyButton = styled.button`
   width: 32px;
 `;
 
-const Link = styled.a`
+const StyledLink = styled.a`
   color: rgba(255, 255, 255, 0.78);
   text-decoration: none;
   &:hover {
@@ -42,7 +42,7 @@ const CopyIcon = styled.img`
   }
 `;
 
-export default function Invidilink(props) {
+export default function Link(props) {
   const { link, handleCopyLink } = props;
   return (
     <>
@@ -53,9 +53,9 @@ export default function Invidilink(props) {
           </CopyButton>
         </LinkCell>
         <LinkCell>
-          <Link href={link} target="_blank">
+          <StyledLink href={link} target="_blank">
             {link}
-          </Link>
+          </StyledLink>
         </LinkCell>
       </LinkContainer>
     </>

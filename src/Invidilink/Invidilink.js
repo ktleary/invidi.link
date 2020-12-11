@@ -4,6 +4,15 @@ import Header from "./components/Header";
 import Entry from "./components/Entry";
 import Result from "./components/Result";
 import Controls from "./components/Controls";
+import { Status } from "./components/Status";
+import { statusMessage } from "../utils/message";
+import { processInstancesData } from "../utils/instance-data";
+import { endpoint, STATUS } from "../constants";
+import {
+  getQueryString,
+  processInstancesData,
+  validateUrl,
+} from "./utils/http";
 
 const InvidilinkWrapper = styled.div`
   background: #1b1b1b;
@@ -19,71 +28,72 @@ const InvidilinkWrapper = styled.div`
   width: 100%;
 `;
 
-function processInstancesData(instancesData) {
-  return (
-    instancesData &&
-    instancesData
-      .filter(
-        (instanceData) =>
-          instanceData[1].stats &&
-          instanceData[1].stats.version &&
-          instanceData[1].monitor &&
-          instanceData[1].monitor.statusClass === "success"
-      )
-      .map((successInstance) => successInstance[1].uri)
-  );
-}
-
-async function getGoodInstances(remoteUrl) {
-  const endpoint = remoteUrl || "https://instances.invidio.us/instances.json";
-  try {
-    const response = await fetch(endpoint);
-    const instancesData = await response.json();
-    return processInstancesData(instancesData);
-  } catch (err) {
-    return {
-      status: `An error occurred while fetching results.`,
-    };
+function handleErrors(response) {
+  if (!response.ok) {
+    throw Error(response.statusText);
   }
+  return response;
 }
 
 function Invidilink() {
   const [url, setUrl] = useState("");
-  const [goodInstances, setGoodInstances] = useState([]);
+  const [availableInstances, setAvailableInstances] = useState([]);
   const [status, setStatus] = useState("");
   const handleClear = () => {
     setUrl("");
   };
 
-  useEffect(() => {
-    const search = window.location.search;
-    const params = new URLSearchParams(search);
-    const url = params.get("url");
-    if (url) setUrl(url);
+  function getGoodInstances() {
+    return fetch(endpoint)
+      .then(handleErrors)
+      .then((response) => processInstancesData(response))
+      .catch((error) => setStatus(STATUS.ERRORRETRIEVING));
+  }
 
-    async function fetchData() {
-      setStatus("Fetching instance data ...");
-      const result = await getGoodInstances();
-      setGoodInstances(result || []);
-      result.status
-        ? setStatus(`${result.status}`)
-        : setStatus(`${result.length} invidious instances available.`);
-    }
+  function handleCopyLink(link) {
+    if (!navigator.clipboard) return;
+    navigator.clipboard
+      .writeText(link)
+      .then((_) => {
+        // setTimeout(() => setLinkCopied(false), 2000);
+      })
+      .catch((e) => {
+        /* clipboard not available */
+      });
+  }
+
+  async function fetchData() {
+    setStatus(STATUS.RETRIEVINGINSTANCES);
+    const result = await getGoodInstances();
+
+    result.status
+      ? setAvailableInstances([]) &&
+        setStatus(statusMessage(STATUS.ERRORRETRIEVING))
+      : setAvailableInstances(result) &&
+        setStatus(statusMessage(STATUS.INSTANCESAVAILABLE, result.length));
+  }
+
+  useEffect(() => {
+    const url = getQueryString("url");
+    if (url) setUrl(url);
     fetchData();
   }, []);
 
   const handleReloadInstanceData = async () => {
-    setStatus("Fetching instance data ...");
-    const goodInstancesResult = await getGoodInstances();
-    setGoodInstances(goodInstancesResult || []);
-    setStatus(`${goodInstancesResult.length} invidious instances found.`);
+    fetchData();
   };
 
   return (
     <InvidilinkWrapper>
       <Header />
       <Entry setUrl={setUrl} url={url} />
-      <Result status={status} goodUrls={goodInstances} url={url} />
+      <Result
+        availableInstances={availableInstances}
+        handleCopyLink={handleCopyLink}
+        url={url}
+        validateUrl={validateUrl}
+      />
+      <Status status={status} />
       <Controls
         url={url}
         handleClear={handleClear}
