@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import copy from '../img/copy.svg';
+import React from "react";
+import styled from "styled-components";
+import copy from "../img/copy.svg";
 
 const CopyButton = styled.button`
   border: 0;
@@ -15,6 +15,9 @@ const CopyButton = styled.button`
 const Link = styled.a`
   color: rgba(255, 255, 255, 0.78);
   text-decoration: none;
+  &:hover{
+    color: rgba(255, 255, 255, 1.0);
+  }
 `;
 
 const LinkContainer = styled.div`
@@ -33,8 +36,9 @@ const LinkCell = styled.div`
 
 const CopyIcon = styled.img`
   cursor: copy;
+  fill: red;
   &:hover {
-    background: rgba(255, 255, 255, 0.1);
+    filter: grayscale(100%) sepia(100%);
   }
 `;
 
@@ -45,7 +49,7 @@ export default function Invidilink(props) {
       <LinkContainer>
         <LinkCell>
           <CopyButton onClick={() => navigator.clipboard.writeText(link)}>
-            <CopyIcon src={copy} alt="Copy URL" />
+            <CopyIcon src={copy} alt="Copy URL" title="Copy URL." />
           </CopyButton>
         </LinkCell>
         <LinkCell>

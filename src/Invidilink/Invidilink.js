@@ -56,6 +56,11 @@ function Invidilink() {
   };
 
   useEffect(() => {
+    const search = window.location.search;
+    const params = new URLSearchParams(search);
+    const url = params.get("url");
+    if (url) setUrl(url);
+
     async function fetchData() {
       setStatus("Fetching instance data ...");
       const result = await getGoodInstances();
