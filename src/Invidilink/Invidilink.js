@@ -67,7 +67,7 @@ function Invidilink() {
       setGoodInstances(result || []);
       result.status
         ? setStatus(`${result.status}`)
-        : setStatus(`${result.length} invidious instances found.`);
+        : setStatus(`${result.length} invidious instances available.`);
     }
     fetchData();
   }, []);

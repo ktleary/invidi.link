@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { nanoid } from "nanoid";
 import { validateUrl } from "../util";
@@ -31,16 +31,32 @@ function replaceUri(original, replacement) {
 
 export default function Result(props) {
   const { status, url, goodUrls } = props;
+  const [linkCopied, setLinkCopied] = useState(false);
+  const handleCopyLink = (link) => {
+    if (!navigator.clipboard) return;
+    navigator.clipboard
+      .writeText(link)
+      .then((_) => {
+        setLinkCopied(true);
+        setTimeout(() => setLinkCopied(false), 2000);
+      })
+      .catch((e) => {});
+  };
   return (
     <ResultContainer>
       <Display>
         {validateUrl(url) && goodUrls.length ? (
           goodUrls.map((goodUrl) => (
-            <Invidilink link={replaceUri(url, goodUrl)} key={nanoid()} />
+            <Invidilink
+              handleCopyLink={handleCopyLink}
+              link={replaceUri(url, goodUrl)}
+              key={nanoid()}
+            />
           ))
         ) : (
           <Status>{status}</Status>
         )}
+        {linkCopied && <Status>link copied!</Status>}
       </Display>
     </ResultContainer>
   );
