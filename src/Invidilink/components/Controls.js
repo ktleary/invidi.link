@@ -3,6 +3,8 @@ import styled from "styled-components";
 import ClearButton from "./ClearButton";
 import { ReloadButton } from "./ReloadButton";
 
+const enableReload = false; // not implementing on public site
+
 const ButtonRow = styled.div`
   display: flex;
   justify-content: center;
@@ -24,7 +26,9 @@ export default function Controls(props) {
         </ClearButton>
       </ButtonContainer>
       <ButtonContainer>
-        <ReloadButton onClick={handleReload}>Reload</ReloadButton>
+        {enableReload && (
+          <ReloadButton onClick={handleReload}>Reload</ReloadButton>
+        )}
       </ButtonContainer>
     </ButtonRow>
   );
