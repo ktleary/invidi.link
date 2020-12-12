@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { nanoid } from "nanoid";
 import Link from "./Link";
+import { replaceUri } from '../utils/http';
 
 const ResultContainer = styled.div`
   border-bottom: 1px solid rgba(0, 0, 0, 0.78);
@@ -16,12 +17,7 @@ const Display = styled.div`
   vertical-align: middle;
 `;
 
-function replaceUri(original, replacement) {
-  const newUrl = new URL(original);
-  const replacementUrl = new URL(replacement);
-  newUrl.host = replacementUrl.host;
-  return newUrl.href;
-}
+
 
 export default function Result(props) {
   const { availableInstances, handleCopyLink, url } = props;

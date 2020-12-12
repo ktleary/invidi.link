@@ -19,6 +19,9 @@ const statusMessage = (props) => {
     case STATUS.CLIPBOARDNOTAVAILABLE:
       message = STATUS.CLIPBOARDNOTAVAILABLE;
       break;
+    case STATUS.BADDATA:
+      message = STATUS.BADDATA;
+      break;
     default:
       message = "";
   }

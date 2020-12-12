@@ -44,8 +44,9 @@ function Invidilink() {
         return response.json();
       })
       .catch((err) => {
-        console.log(err);
+        const { name } = err;
         setStatus(statusMessage({ type: STATUS.ERRORRETRIEVING }));
+        return { error: name };
       });
     return processInstancesData(result);
   }
@@ -63,7 +64,6 @@ function Invidilink() {
       .catch((e) => {
         setStatus(statusMessage({ type: STATUS.CLIPBOARDNOTAVAILABLE }));
         setTimeout(() => {
-
           setStatus("");
         }, 2000);
       });
@@ -73,7 +73,10 @@ function Invidilink() {
     async function fetchInstanceData() {
       setStatus(STATUS.RETRIEVINGINSTANCES);
       const result = await getAvailableInstances();
-      if (result) {
+      if (!result || result.error) {
+        setAvailableInstances([]);
+        setStatus(statusMessage({ type: STATUS.BADDATA }));
+      } else if (result.length > 1) {
         setAvailableInstances(result);
         setStatus(
           statusMessage({

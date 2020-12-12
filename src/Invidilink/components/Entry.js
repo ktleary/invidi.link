@@ -16,13 +16,7 @@ const EntryContainer = styled.div`
 const placeholder = "Enter YouTube or Invidious URL.";
 
 export default function Entry(props) {
-  const { url, setUrl } = props;
-
-  const handleInputChange = (event) => {
-    const { target } = event;
-    if (!target) return;
-    setUrl(target.value);
-  };
+  const { url, handleInputChange } = props;
 
   return (
     <EntryContainer>
@@ -31,8 +25,10 @@ export default function Entry(props) {
           value={url}
           onChange={handleInputChange}
           placeholder={placeholder}
+          data-testid="entry-input"
         />
       </InputContainer>
     </EntryContainer>
   );
 }
+
