@@ -48,7 +48,10 @@ export default function Link(props) {
     <>
       <LinkContainer>
         <LinkCell>
-          <CopyButton onClick={() => handleCopyLink(link)}>
+          <CopyButton
+            onClick={() => handleCopyLink(link)}
+            data-testid="copy-button"
+          >
             <CopyIcon src={copy} alt="Copy URL" title="Copy URL." />
           </CopyButton>
         </LinkCell>
