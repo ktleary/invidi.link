@@ -55,12 +55,17 @@ function Invidilink() {
     navigator.clipboard
       .writeText(link)
       .then((_) => {
-        setStatus(statusMessage(STATUS.LINKCOPIED));
-        setTimeout(() => setStatus(""), 2000);
+        setStatus(statusMessage({ type: STATUS.LINKCOPIED }));
+        setTimeout(() => {
+          setStatus("");
+        }, 2000);
       })
       .catch((e) => {
-        setStatus(statusMessage(STATUS.CLIPBOARDNOTAVAILABLE));
-        setTimeout(() => setStatus(""), 2000);
+        setStatus(statusMessage({ type: STATUS.CLIPBOARDNOTAVAILABLE }));
+        setTimeout(() => {
+
+          setStatus("");
+        }, 2000);
       });
   }
 
@@ -81,7 +86,6 @@ function Invidilink() {
 
     const suppliedUrl = getQueryString("url");
     if (suppliedUrl) setUrl(suppliedUrl);
-
     fetchInstanceData();
   }, []);
 

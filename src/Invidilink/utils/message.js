@@ -13,6 +13,12 @@ const statusMessage = (props) => {
     case STATUS.ERRORRETRIEVING:
       message = STATUS.ERRORRETRIEVING;
       break;
+    case STATUS.LINKCOPIED:
+      message = STATUS.LINKCOPIED;
+      break;
+    case STATUS.CLIPBOARDNOTAVAILABLE:
+      message = STATUS.CLIPBOARDNOTAVAILABLE;
+      break;
     default:
       message = "";
   }
