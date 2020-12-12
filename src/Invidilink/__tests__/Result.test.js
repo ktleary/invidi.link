@@ -9,7 +9,7 @@ test("renders a supplied link", () => {
     "https://domain3.xyz",
   ];
   const url = "https://inviodus.snoptya.org/watch?v=123";
-  const status = "6 inviodus found";
+  const status = "6 invidious found";
   render(<Result status={status} goodUrls={goodInstances} url={url} validateUrl={validateUrl} />);
   const linkElement = screen.getByText(url);
   expect(linkElement).toBeInTheDocument();

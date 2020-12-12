@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { nanoid } from "nanoid";
 import Link from "./Link";
@@ -29,10 +29,10 @@ export default function Result(props) {
   return (
     <ResultContainer>
       <Display>
-        {availableInstances.map((goodUrl) => (
+        {availableInstances.map((availableInstance) => (
           <Link
             handleCopyLink={handleCopyLink}
-            link={replaceUri(url, goodUrl)}
+            link={replaceUri(url, availableInstance)}
             key={nanoid()}
           />
         ))}

@@ -4,10 +4,9 @@ import Header from "./components/Header";
 import Entry from "./components/Entry";
 import Result from "./components/Result";
 import Controls from "./components/Controls";
-import { Status } from "./components/Status";
-import { statusMessage } from "../utils/message";
-import { processInstancesData } from "../utils/instance-data";
-import { endpoint, STATUS } from "../constants";
+import Status from "./components/Status";
+import { statusMessage } from "./utils/message";
+import { endpoint, STATUS } from "./constants";
 import {
   getQueryString,
   processInstancesData,
@@ -28,13 +27,6 @@ const InvidilinkWrapper = styled.div`
   width: 100%;
 `;
 
-function handleErrors(response) {
-  if (!response.ok) {
-    throw Error(response.statusText);
-  }
-  return response;
-}
-
 function Invidilink() {
   const [url, setUrl] = useState("");
   const [availableInstances, setAvailableInstances] = useState([]);
@@ -43,11 +35,19 @@ function Invidilink() {
     setUrl("");
   };
 
-  function getGoodInstances() {
-    return fetch(endpoint)
-      .then(handleErrors)
-      .then((response) => processInstancesData(response))
-      .catch((error) => setStatus(STATUS.ERRORRETRIEVING));
+  async function getAvailableInstances() {
+    const result = await fetch(endpoint)
+      .then((response) => {
+        if (!response.ok) {
+          throw Error(response.statusText);
+        }
+        return response.json();
+      })
+      .catch((err) => {
+        console.log(err);
+        setStatus(statusMessage({ type: STATUS.ERRORRETRIEVING }));
+      });
+    return processInstancesData(result);
   }
 
   function handleCopyLink(link) {
@@ -55,44 +55,51 @@ function Invidilink() {
     navigator.clipboard
       .writeText(link)
       .then((_) => {
-        // setTimeout(() => setLinkCopied(false), 2000);
+        setStatus(statusMessage(STATUS.LINKCOPIED));
+        setTimeout(() => setStatus(""), 2000);
       })
       .catch((e) => {
-        /* clipboard not available */
+        setStatus(statusMessage(STATUS.CLIPBOARDNOTAVAILABLE));
+        setTimeout(() => setStatus(""), 2000);
       });
   }
 
-  async function fetchData() {
-    setStatus(STATUS.RETRIEVINGINSTANCES);
-    const result = await getGoodInstances();
-
-    result.status
-      ? setAvailableInstances([]) &&
-        setStatus(statusMessage(STATUS.ERRORRETRIEVING))
-      : setAvailableInstances(result) &&
-        setStatus(statusMessage(STATUS.INSTANCESAVAILABLE, result.length));
-  }
-
   useEffect(() => {
-    const url = getQueryString("url");
-    if (url) setUrl(url);
-    fetchData();
+    async function fetchInstanceData() {
+      setStatus(STATUS.RETRIEVINGINSTANCES);
+      const result = await getAvailableInstances();
+      if (result) {
+        setAvailableInstances(result);
+        setStatus(
+          statusMessage({
+            type: STATUS.INSTANCESAVAILABLE,
+            quantity: result.length,
+          })
+        );
+      }
+    }
+
+    const suppliedUrl = getQueryString("url");
+    if (suppliedUrl) setUrl(suppliedUrl);
+
+    fetchInstanceData();
   }, []);
 
   const handleReloadInstanceData = async () => {
-    fetchData();
+    // fetchInstanceData();
   };
 
   return (
     <InvidilinkWrapper>
       <Header />
       <Entry setUrl={setUrl} url={url} />
-      <Result
-        availableInstances={availableInstances}
-        handleCopyLink={handleCopyLink}
-        url={url}
-        validateUrl={validateUrl}
-      />
+      {validateUrl(url) && (
+        <Result
+          availableInstances={availableInstances}
+          handleCopyLink={handleCopyLink}
+          url={url}
+        />
+      )}
       <Status status={status} />
       <Controls
         url={url}
