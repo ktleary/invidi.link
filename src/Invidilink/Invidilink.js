@@ -6,8 +6,9 @@ import Result from "./components/Result";
 import Controls from "./components/Controls";
 import Status from "./components/Status";
 import { statusMessage } from "./utils/message";
-import { endpoint, STATUS } from "./constants";
+import { STATUS } from "./constants";
 import {
+  getAvailableInstances,
   getQueryString,
   processInstancesData,
   validateUrl,
@@ -34,21 +35,6 @@ function Invidilink() {
   const handleClear = () => {
     setUrl("");
   };
-
-  async function getAvailableInstances() {
-    const result = await fetch(endpoint)
-      .then((response) => {
-        if (!response.ok) {
-          throw Error(response.statusText);
-        }
-        return response.json();
-      })
-      .catch((err) => {
-        const { name } = err;
-        return { error: name };
-      });
-    return processInstancesData(result);
-  }
 
   function handleCopyLink(link) {
     if (!navigator.clipboard) return;
@@ -81,12 +67,13 @@ function Invidilink() {
       if (!result || result.error) {
         setAvailableInstances([]);
         setStatus(statusMessage({ type: STATUS.BADDATA }));
-      } else if (result.length > 1) {
-        setAvailableInstances(result);
+      } else if (Array.isArray(result)) {
+        const instances = processInstancesData(result);
+        setAvailableInstances(instances);
         setStatus(
           statusMessage({
             type: STATUS.INSTANCESAVAILABLE,
-            quantity: result.length,
+            quantity: instances.length,
           })
         );
       }

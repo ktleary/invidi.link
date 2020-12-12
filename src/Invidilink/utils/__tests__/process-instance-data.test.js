@@ -26,7 +26,7 @@ test("processInstancesData returns a TypeError when when a garbage string is ret
 });
 
 test("processInstancesData returns a ___ error when when a promise is returned from the api", () => {
-  const availableInstances = processInstancesData(new Error('Whoops!'));
+  const availableInstances = processInstancesData("");
 
   expect(availableInstances.error).toEqual("TypeError");
 });

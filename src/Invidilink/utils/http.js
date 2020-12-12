@@ -1,8 +1,24 @@
+import { endpoint } from '../constants';
+
 function getQueryString(queryParam = "url") {
   const search = window.location.search;
   const params = new URLSearchParams(search);
   const url = params.get(queryParam);
   return url;
+}
+
+async function getAvailableInstances() {
+  return await fetch(endpoint)
+    .then((response) => {
+      if (!response.ok) {
+        throw Error(response.statusText);
+      }
+      return response.json();
+    })
+    .catch((err) => {
+      const { name } = err;
+      return { error: name };
+    });
 }
 
 function processInstancesData(instancesData) {
@@ -38,4 +54,10 @@ const validateUrl = (string) => {
   return true;
 };
 
-export { getQueryString, processInstancesData, replaceUri, validateUrl };
+export {
+  getAvailableInstances,
+  getQueryString,
+  processInstancesData,
+  replaceUri,
+  validateUrl,
+};
