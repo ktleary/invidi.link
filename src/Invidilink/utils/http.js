@@ -20,8 +20,8 @@ function processInstancesData(instancesData) {
     const { name } = e;
     if (name === "TypeError") {
       return { error: name };
+      /* add TypeError (bad data) handling  */
     } else {
-      console.log("didn't catch on typeerror");
       return { error: name };
     }
   }

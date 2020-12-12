@@ -45,7 +45,6 @@ function Invidilink() {
       })
       .catch((err) => {
         const { name } = err;
-        setStatus(statusMessage({ type: STATUS.ERRORRETRIEVING }));
         return { error: name };
       });
     return processInstancesData(result);
@@ -68,6 +67,12 @@ function Invidilink() {
         }, 2000);
       });
   }
+
+  const handleInputChange = (event) => {
+    const { target } = event;
+    if (!target) return;
+    setUrl(target.value);
+  };
 
   useEffect(() => {
     async function fetchInstanceData() {
@@ -97,9 +102,9 @@ function Invidilink() {
   };
 
   return (
-    <InvidilinkWrapper>
+    <InvidilinkWrapper data-testid="invidilink-wrapper">
       <Header />
-      <Entry setUrl={setUrl} url={url} />
+      <Entry handleInputChange={handleInputChange} url={url} />
       {validateUrl(url) && (
         <Result
           availableInstances={availableInstances}
