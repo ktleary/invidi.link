@@ -18,12 +18,7 @@ function processInstancesData(instancesData) {
       .map((successInstance) => successInstance[1].uri);
   } catch (e) {
     const { name } = e;
-    if (name === "TypeError") {
-      return { error: name };
-      /* add TypeError (bad data) handling  */
-    } else {
-      return { error: name };
-    }
+    return { error: name };
   }
 }
 

@@ -8,7 +8,9 @@ const statusMessage = (props) => {
       message = STATUS.RETRIEVINGINSTANCES;
       break;
     case STATUS.INSTANCESAVAILABLE:
-      message = `${quantity} ${STATUS.INSTANCESAVAILABLE}`;
+      message = quantity
+        ? `${quantity} ${STATUS.INSTANCESAVAILABLE}`
+        : STATUS.INSTANCESAVAILABLE;
       break;
     case STATUS.ERRORRETRIEVING:
       message = STATUS.ERRORRETRIEVING;

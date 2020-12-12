@@ -10,7 +10,9 @@ test("renders a supplied link", () => {
 
 test("it renders the Copy Button", () => {
   const url = "https://invidious.tube/watch?v=hY7m5jjJ9mM";
-  render(<Link link={url} />);
+  const handleCopyLink = () => {};
+
+  render(<Link link={url} handleCopyLink={handleCopyLink} />);
   const CopyElement = screen.getByTestId("copy-button");
   expect(CopyElement).toBeInTheDocument();
 });
