@@ -1,4 +1,4 @@
-import { endpoint } from '../constants';
+import { endpoint } from "../constants";
 
 function getQueryString(queryParam = "url") {
   const search = window.location.search;
@@ -21,23 +21,6 @@ async function getAvailableInstances() {
     });
 }
 
-function processInstancesData(instancesData) {
-  try {
-    return instancesData
-      .filter(
-        (instanceData) =>
-          instanceData[1].stats &&
-          instanceData[1].stats.version &&
-          instanceData[1].monitor &&
-          instanceData[1].monitor.statusClass === "success"
-      )
-      .map((successInstance) => successInstance[1].uri);
-  } catch (e) {
-    const { name } = e;
-    return { error: name };
-  }
-}
-
 function replaceUri(original, replacement) {
   const newUrl = new URL(original);
   const replacementUrl = new URL(replacement);
@@ -57,7 +40,6 @@ const validateUrl = (string) => {
 export {
   getAvailableInstances,
   getQueryString,
-  processInstancesData,
   replaceUri,
   validateUrl,
 };

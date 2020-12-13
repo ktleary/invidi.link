@@ -5,12 +5,13 @@ import Entry from "./components/Entry";
 import Result from "./components/Result";
 import Controls from "./components/Controls";
 import Status from "./components/Status";
+import copyToClipboard from "./utils/clipboard";
 import { statusMessage } from "./utils/message";
 import { STATUS } from "./constants";
+import { parseInstancesResult } from "./utils/instance-data";
 import {
   getAvailableInstances,
   getQueryString,
-  processInstancesData,
   validateUrl,
 } from "./utils/http";
 
@@ -36,27 +37,19 @@ function Invidilink() {
     setUrl("");
   };
 
-  function handleCopyLink(link) {
-    if (!navigator.clipboard) return;
-    navigator.clipboard
-      .writeText(link)
-      .then((_) => {
-        setStatus(statusMessage({ type: STATUS.LINKCOPIED }));
-        setTimeout(() => {
-          setStatus("");
-        }, 2000);
-      })
-      .catch((e) => {
-        setStatus(statusMessage({ type: STATUS.CLIPBOARDNOTAVAILABLE }));
-        setTimeout(() => {
-          setStatus("");
-        }, 2000);
-      });
+  async function handleCopyLink(link) {
+    const message = (await copyToClipboard(link))
+      ? STATUS.LINKCOPIED
+      : STATUS.CLIPBOARDNOTAVAILABLE;
+    setStatus(statusMessage({ type: message }));
+    setTimeout(() => {
+      setStatus("");
+    }, 2000);
   }
 
-  const handleInputChange = (event) => {
-    const { target } = event;
-    if (!target) return;
+  const handleInputChange = (e) => {
+    if (!e) return;
+    const { target } = e;
     setUrl(target.value);
   };
 
@@ -64,19 +57,9 @@ function Invidilink() {
     async function fetchInstanceData() {
       setStatus(STATUS.RETRIEVINGINSTANCES);
       const result = await getAvailableInstances();
-      if (!result || result.error) {
-        setAvailableInstances([]);
-        setStatus(statusMessage({ type: STATUS.BADDATA }));
-      } else if (Array.isArray(result)) {
-        const instances = processInstancesData(result);
-        setAvailableInstances(instances);
-        setStatus(
-          statusMessage({
-            type: STATUS.INSTANCESAVAILABLE,
-            quantity: instances.length,
-          })
-        );
-      }
+      const [message, instances] = parseInstancesResult(result);
+      setAvailableInstances(instances);
+      setStatus(message);
     }
 
     const suppliedUrl = getQueryString("url");

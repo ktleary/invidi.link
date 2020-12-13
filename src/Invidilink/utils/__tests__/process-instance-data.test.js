@@ -1,5 +1,20 @@
-import { processInstancesData } from "../../utils/http";
+import {
+  parseInstancesResult,
+  processInstancesData,
+} from "../../utils/instance-data";
 import instanceData from "../../../data/instance-data-sample";
+
+test("parseInstancesResult returns successful message", () => {
+  const [message, instances] = parseInstancesResult(instanceData);
+  expect(message).toBe("6 instances are available.");
+  expect(instances.length).toBe(6);
+});
+
+test("parseInstancesResult returns bad data message", () => {
+  const [message, instances] = parseInstancesResult({error: "TypeError"});
+  expect(message).toBe("The remote data could not be read.");
+  expect(instances.length).toBe(0);
+});
 
 test("processInstancesData returns the successful available instances", () => {
   const availableInstances = processInstancesData(instanceData);
