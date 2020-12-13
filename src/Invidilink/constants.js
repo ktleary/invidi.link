@@ -7,7 +7,7 @@ const STATUS = Object.freeze({
   RETRIEVINGINSTANCES: "retrieving instances ...",
 });
 
-// const endpoint = "https://instances.invidio.us/instances.json";
-const endpoint = "http://localhost:5000/instance-data.json";
+const endpoint = "https://instances.invidio.us/instances.json";
+// const endpoint = "http://localhost:5000/instance-data.json";
 
 export { endpoint, STATUS };

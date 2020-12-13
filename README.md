@@ -2,25 +2,48 @@
 
 [![Build Status](https://cloud.drone.io/api/badges/ktleary/invidi.link/status.svg)](https://cloud.drone.io/ktleary/invidi.link)
 
-A mobile-first React 17 component to replace URLs with valid invidio.us instances URLs.
+A mobile-first React app to replace URLs with valid invidio.us instances URLs.
 
 For example:
 
 Submitted URL: `https://www.youtube.com/watch?v=sbFAcHteZd8`
-Results:
 
-- `https://invidious.snopyta.org/watch?v=sbFAcHteZd8`
-- `https://invidious.tube/watch?v=sbFAcHteZd8`
-- `https://yewtu.be/watch?v=sbFAcHteZd8`
-- `https://invidious.xyz/watch?v=sbFAcHteZd8`
-- `https://invidious.kavin.rocks/watch?v=sbFAcHteZd8`
-- `https://invidiou.site/watch?v=sbFAcHteZd8`
+Sample Results:
+
+-   `https://invidious.snopyta.org/watch?v=sbFAcHteZd8`
+-   `https://invidious.tube/watch?v=sbFAcHteZd8`
+-   `https://yewtu.be/watch?v=sbFAcHteZd8`
+-   `https://invidious.xyz/watch?v=sbFAcHteZd8`
+-   `https://invidious.kavin.rocks/watch?v=sbFAcHteZd8`
+-   `https://invidiou.site/watch?v=sbFAcHteZd8`
 
 Features a copy button for easy use on mobile.
 
+Additionally, provide a "url" parameter to prepopulate the form:
+
+https://invidi.link/?url=https://www.youtube.com/watch?v=iRXJXaLV0n4
+
 In the wild: https://invidi.link/
 
-## How to run on localhost
+### How it works
+
+invidilink uses monitor data provided by invidio.us to determine which instances are successfully serving videos. The list is populated once
+per user session.
+
+### Privacy
+
+invidilinks is GPL licensed. No third-party trackers are used and no
+URL data is sent to the server.
+
+### Contributing
+
+If you would like to contribute, please submit a PR.
+
+## Installation
+
+It is recommended to use a local endpoint for development testing.
+
+### How to run on localhost
 
 First install dependencies:
 
@@ -42,15 +65,11 @@ To create a production build:
 npm run build
 ```
 
-## Testing
+### Testing
 
 To run unit tests:
 
 ```sh
 npm test
 ```
-
-## Credits
-
-1. Scaffolding made with [createapp.dev](https://createapp.dev/)
 

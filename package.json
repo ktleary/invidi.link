@@ -1,7 +1,7 @@
 {
   "name": "invidi.link",
   "description": "Created invidious links from urls.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "browserslist": {
     "production": [
       ">0.2%",
