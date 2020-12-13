@@ -4,8 +4,8 @@ export default async function copyToClipboard(text) {
         .writeText(text)
         .then((_) => true)
         .catch((e) => {
-          console.log(e.name, e.message);
           return false;
         })
     : false;
 }
+

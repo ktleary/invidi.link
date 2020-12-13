@@ -16,8 +16,6 @@ Results:
 
 Features a copy button for easy use on mobile.
 
-API calls may be cached to reduce network calls (default 5 minutes).
-
 In the wild: https://invidi.link/
 
 ## How to run on localhost
@@ -54,4 +52,3 @@ npm test
 
 1. Scaffolding made with [createapp.dev](https://createapp.dev/)
 
-2. Copy Icon provided Sebastien Gabriel http://sebastien-gabriel.co under Creative Commons Licence (https://commons.wikimedia.org/wiki/File:Copy-outlined-circular-button.svg)

@@ -1,27 +1,25 @@
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
+import Icon from "./Icon";
 
-const CopyButton = styled.button`
-  background: rgba(13, 71, 161, 0.76);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  color: rgba(255, 255, 255, 0.78);
-  height: 40px;
-  outline: 0;
-  width: 60px;
-  &:disabled {
-    background: rgba(49, 49, 49, 1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.3);
-  }
-  &:disabled:hover {
-    background: rgba(49, 49, 49, 1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.3);
-  }
-  &:hover {
-    background: rgba(13, 71, 161, 1);
-    color: rgba(255, 255, 255, 1);
-  }
+const Svg = styled(Icon)`
+  height: 24px;
+  width: 24px;
 `;
+
+const CopyButton = ({ className }) => (
+  <Svg
+    data-testid="copy-button"
+    title="Copy Link"
+    viewBox="0 0 24 24"
+    className={className}
+  >
+    <path d="M0 0h24v24H0z" fill="transparent" />
+    <path
+      fill="currentColor"
+      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"
+    />
+  </Svg>
+);
 
 export default CopyButton;

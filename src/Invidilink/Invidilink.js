@@ -23,9 +23,9 @@ const InvidilinkWrapper = styled.div`
   font-size: 100%;
   height: 100vh;
   outline: 0;
-  overflow-y: hidden;
+  overflow-y: auto;
   margin: 0;
-  padding: 0;
+  padding: 0 0 16px 0;
   width: 100%;
 `;
 
@@ -43,7 +43,12 @@ function Invidilink() {
       : STATUS.CLIPBOARDNOTAVAILABLE;
     setStatus(statusMessage({ type: message }));
     setTimeout(() => {
-      setStatus("");
+      setStatus(
+        statusMessage({
+          type: STATUS.INSTANCESAVAILABLE,
+          quantity: availableInstances.length,
+        })
+      );
     }, 2000);
   }
 

@@ -4,7 +4,6 @@ import { Input, InputContainer } from "./Input";
 
 const EntryContainer = styled.div`
   align-items: center;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.78);
   display: flex;
   height: 48px;
   line-height: 48px;
@@ -13,7 +12,7 @@ const EntryContainer = styled.div`
   vertical-align: middle;
 `;
 
-const placeholder = "Enter YouTube or Invidious URL.";
+const placeholder = "Enter a YouTube or Invidious URL.";
 
 export default function Entry(props) {
   const { url, handleInputChange } = props;

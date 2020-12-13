@@ -8,11 +8,12 @@ const enableReload = false; // not implementing on public site
 const ButtonRow = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 16px;
+  margin: auto;
+  text-align: center;
 `;
 
 const ButtonContainer = styled.div`
-  margin: 8px;
+  margin: 8px 0;
 `;
 
 export default function Controls(props) {
