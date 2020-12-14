@@ -1,6 +1,6 @@
 # invidi.link
 
-[![Build Status](https://cloud.drone.io/api/badges/ktleary/invidi.link/status.svg)](https://cloud.drone.io/ktleary/invidi.link)
+[![builds.sr.ht status](https://builds.sr.ht/~djlooop/invidi.link.svg)](https://builds.sr.ht/~djlooop/invidi.link?)
 
 A mobile-first React app to replace URLs with valid invidio.us instances URLs.
 
