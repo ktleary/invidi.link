@@ -43,6 +43,8 @@ If you would like to contribute, please submit a PR.
 
 It is recommended to use a local endpoint for development testing.
 
+The endpoint is set in api-config.js.
+
 ### How to run on localhost
 
 First install dependencies:
@@ -72,4 +74,3 @@ To run unit tests:
 ```sh
 npm test
 ```
-

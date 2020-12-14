@@ -5,6 +5,8 @@ import Entry from "./components/Entry";
 import Result from "./components/Result";
 import Controls from "./components/Controls";
 import Status from "./components/Status";
+import About from "./components/About";
+import Footer from "./components/Footer";
 import copyToClipboard from "./utils/clipboard";
 import { statusMessage } from "./utils/message";
 import { STATUS } from "./constants";
@@ -24,14 +26,17 @@ const InvidilinkWrapper = styled.div`
   height: 100vh;
   outline: 0;
   overflow-y: auto;
+  padding-bottom: 24px;
   margin: 0;
-  padding: 0 0 16px 0;
   width: 100%;
+
 `;
 
 function Invidilink() {
-  const [url, setUrl] = useState("");
+  const [about, setAbout] = useState(false);
   const [availableInstances, setAvailableInstances] = useState([]);
+  const [url, setUrl] = useState("");
+
   const [status, setStatus] = useState("");
   const handleClear = () => {
     setUrl("");
@@ -76,6 +81,11 @@ function Invidilink() {
     // fetchInstanceData();
   };
 
+  const toggleAbout = () => {
+    const val = !about;
+    setAbout(val);
+  };
+
   return (
     <InvidilinkWrapper data-testid="invidilink-wrapper">
       <Header />
@@ -93,6 +103,8 @@ function Invidilink() {
         handleClear={handleClear}
         handleReload={handleReloadInstanceData}
       />
+      {about && <About toggleAbout={toggleAbout} />}
+      <Footer data-testid="footer" toggleAbout={toggleAbout} />
     </InvidilinkWrapper>
   );
 }

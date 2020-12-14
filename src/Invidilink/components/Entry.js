@@ -24,7 +24,7 @@ export default function Entry(props) {
           value={url}
           onChange={handleInputChange}
           placeholder={placeholder}
-          data-testid="entry-input"
+          data-testid="input-entry"
         />
       </InputContainer>
     </EntryContainer>

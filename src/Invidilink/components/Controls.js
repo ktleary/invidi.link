@@ -22,7 +22,11 @@ export default function Controls(props) {
   return (
     <ButtonRow>
       <ButtonContainer>
-        <ClearButton onClick={handleClear} disabled={clearDisabled}>
+        <ClearButton
+          onClick={handleClear}
+          disabled={clearDisabled}
+          data-testid="button-clear"
+        >
           Clear
         </ClearButton>
       </ButtonContainer>

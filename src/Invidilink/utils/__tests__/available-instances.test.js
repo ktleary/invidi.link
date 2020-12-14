@@ -1,6 +1,6 @@
 import fetchMock from "jest-fetch-mock";
 import { getAvailableInstances } from "../http";
-import { endpoint } from "../../constants";
+import { ENDPOINT } from "../../api-config";
 import instanceData from "../../../data/instance-data-sample";
 
 beforeEach(() => {
@@ -25,5 +25,5 @@ it("returns error when exception", async () => {
 
   const results = await getAvailableInstances();
   expect(results.error).toEqual("NetworkError");
-  expect(fetch).toHaveBeenCalledWith(endpoint);
+  expect(fetch).toHaveBeenCalledWith(ENDPOINT);
 });

@@ -1,4 +1,4 @@
-import { endpoint } from "../constants";
+import { ENDPOINT } from "../api-config";
 
 function getQueryString(queryParam = "url") {
   const search = window.location.search;
@@ -8,7 +8,7 @@ function getQueryString(queryParam = "url") {
 }
 
 async function getAvailableInstances() {
-  return await fetch(endpoint)
+  return await fetch(ENDPOINT)
     .then((response) => {
       if (!response.ok) {
         throw Error(response.statusText);

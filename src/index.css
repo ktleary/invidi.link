@@ -1,6 +1,9 @@
+
+
 html, body{
   background: #1b1b1b;
   font-size: 100%;
+  position: relative;
 }
 body {
   margin: 0;

@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const HeaderContainer = styled.div`
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -9,17 +9,25 @@ const HeaderContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  color: rgba(255, 255, 255, 0.33);
+  color: rgba(255, 255, 255, 0.666);
   margin: auto;
   font-size: 32px;
   font-family: sans-serif;
   font-weight: normal;
 `;
 
+const HeaderLink = styled.a`
+  color: rgba(255, 255, 255, 0.666);
+  font-size: 32px;
+  text-decoration: none;
+`;
+
 export default function Header() {
   return (
     <HeaderContainer>
-      <Title>invidilink</Title>
+      <HeaderLink href="https://invidi.link">
+        <Title>invidilink</Title>
+      </HeaderLink>
     </HeaderContainer>
   );
 }

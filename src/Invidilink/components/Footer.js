@@ -1,0 +1,50 @@
+import React from "react";
+import styled from "styled-components";
+
+const FooterContainer = styled.div`
+  background: #1b1b1b;
+  display: flex;
+  height: 24px;
+  justify-content: center;
+  padding: 8px;
+  opacity: 1;
+  /* stick to bottom */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+`;
+
+const FooterCell = styled.div`
+  align-items: center;
+  display: flex;
+  font-size: 14px;
+  padding: 5px;
+  text-align: center;
+  vertical-align: middle;
+`;
+
+const FooterLink = styled.a`
+  color: rgba(255, 255, 255, 0.87);
+  cursor: pointer;
+  text-decoration: none;
+  :hover {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: underline;
+  }
+  &:active {
+    color: rgba(255, 255, 255, 1);
+  }
+`;
+
+export default function Footer(props) {
+  const { toggleAbout } = props;
+  return (
+    <FooterContainer>
+      <FooterCell>GPLv3</FooterCell>
+      <FooterCell onClick={toggleAbout}>
+        <FooterLink data-testid="about-link">About & Privacy</FooterLink>
+      </FooterCell>
+    </FooterContainer>
+  );
+}
