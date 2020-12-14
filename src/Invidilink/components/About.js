@@ -108,9 +108,9 @@ export default function About(props) {
           &nbsp;
           <AboutLink
             target="_blank"
-            href="https://github.com/ktleary/invidi.link"
+            href="https://sr.ht/~djlooop/invidi.link/"
           >
-            https://github.com/ktleary/invidi.link
+            https://sr.ht/~djlooop/invidi.link/
           </AboutLink>
         </p>
       </AboutContent>
