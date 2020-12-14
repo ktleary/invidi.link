@@ -1,0 +1,15 @@
+image: archlinux
+packages:
+  - nodejs
+  - npm
+sources:
+  - https://git.sr.ht/~djlooop/invidi.link
+tasks:
+  - setup: |
+      cd invidi.link
+      npm install
+  - test: |
+      cd invidi.link
+      npm test
+
+
