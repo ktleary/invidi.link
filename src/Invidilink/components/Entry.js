@@ -25,6 +25,7 @@ export default function Entry(props) {
           onChange={handleInputChange}
           placeholder={placeholder}
           data-testid="input-entry"
+          autoFocus
         />
       </InputContainer>
     </EntryContainer>
