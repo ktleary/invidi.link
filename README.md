@@ -2,7 +2,9 @@
 
 [![builds.sr.ht status](https://builds.sr.ht/~djlooop/invidi.link.svg)](https://builds.sr.ht/~djlooop/invidi.link?)
 
-A mobile-first React app to replace URLs with valid invidio.us instances URLs.
+A mobile-first React app to replace URLs with valid invidious (invidio.us) instances URLs.
+
+Ideal for mobile use when somebody posts a youtube link or when one or more instances are experiencing performance issues and a substitute is desired.
 
 For example:
 
@@ -19,11 +21,13 @@ Sample Results:
 
 Features a copy button for easy use on mobile.
 
-Additionally, provide a "url" parameter to prepopulate the form:
+Additionally, provide a "url" parameter to pre-populate the form:
 
 https://invidi.link/?url=https://www.youtube.com/watch?v=iRXJXaLV0n4
 
 In the wild: https://invidi.link/
+
+![invidi.link screen](invidilink-screen.png)
 
 ### How it works
 
@@ -32,7 +36,7 @@ per user session.
 
 ### Privacy
 
-invidilinks is GPL licensed. No third-party trackers are used and no
+invidilink is GPL licensed. No third-party trackers are used and no
 URL data is sent to the server.
 
 ### Contributing
