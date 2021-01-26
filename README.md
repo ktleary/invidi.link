@@ -2,7 +2,7 @@
 
 [![builds.sr.ht status](https://builds.sr.ht/~djlooop/invidi.link.svg)](https://builds.sr.ht/~djlooop/invidi.link?)
 
-A mobile-first React app to replace URLs with valid invidious (invidio.us) instances URLs.
+A mobile-first React app to replace URLs with valid invidious (invidio.io) instances URLs.
 
 Ideal for mobile use when somebody posts a youtube link or when one or more instances are experiencing performance issues and a substitute is desired.
 
@@ -31,7 +31,7 @@ In the wild: https://invidi.link/
 
 ### How it works
 
-invidilink uses monitor data provided by invidio.us to determine which instances are successfully serving videos. The list is populated once
+invidilink uses monitor data provided by invidio.io to determine which instances are successfully serving videos. The list is populated once
 per user session.
 
 ### Privacy

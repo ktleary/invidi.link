@@ -100,7 +100,7 @@ export default function About(props) {
         <p>
           invidi.link repects user privacy. No analytics or third-party trackers
           are used and no data is sent to the server. The application works by
-          downloading server uptime data from invidio.us and all transformed
+          downloading server uptime data from invidious.io and all transformed
           urls are created in the browser.
         </p>
         <p>
