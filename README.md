@@ -2,9 +2,9 @@
 
 [![builds.sr.ht status](https://builds.sr.ht/~djlooop/invidi.link.svg)](https://builds.sr.ht/~djlooop/invidi.link?)
 
-A mobile-first React app to replace URLs with valid invidious (invidious.io) instances URLs.
+Invidilink is a mobile-first React app to replace URLs with valid invidio.us (invidious.io) instances URLs.
 
-Ideal for mobile use when somebody posts a youtube link or when one or more instances are experiencing performance issues and a substitute is desired.
+Ideal for mobile use when somebody posts a youtube link or when one or more invidious instances are experiencing performance issues and a substitute is desired.
 
 For example:
 
