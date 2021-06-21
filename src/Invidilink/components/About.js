@@ -93,7 +93,7 @@ const About = ({ toggleAbout }) => (
     <AboutContent>
       <div>
         invidilink is a free, open-source tool written in React and licensed
-        under GPLv3.
+        under GPL-3.
       </div>
       <p>
         invidi.link repects user privacy. No analytics or third-party trackers
