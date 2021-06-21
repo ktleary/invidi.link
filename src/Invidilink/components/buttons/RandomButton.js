@@ -7,7 +7,7 @@ const RandomButton = styled.button`
   color: rgba(255, 255, 255, 0.78);
   height: 40px;
   outline: 0;
-  width: 108px;
+  width: 128px;
   &:hover {
     background: rgba(64, 99, 66, 1);
     border: 1px solid rgba(255, 255, 255, 0.87);
