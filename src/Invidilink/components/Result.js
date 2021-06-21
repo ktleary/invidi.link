@@ -17,14 +17,16 @@ const Display = styled.div`
   vertical-align: middle;
 `;
 
+const id = nanoid();
+
 const Result = ({ availableInstances, handleCopyLink, url }) => (
   <ResultContainer>
     <Display>
-      {availableInstances.map((availableInstance) => (
+      {availableInstances.map((availableInstance, idx) => (
         <Link
           handleCopyLink={handleCopyLink}
           link={replaceUri(url, availableInstance)}
-          key={nanoid()}
+          key={`result-${id}-${idx}`}
         />
       ))}
     </Display>
