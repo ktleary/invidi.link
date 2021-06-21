@@ -14,21 +14,18 @@ const EntryContainer = styled.div`
 
 const placeholder = "Enter a YouTube or Invidious URL.";
 
-export default function Entry(props) {
-  const { url, handleInputChange } = props;
+const Entry = ({ url, handleInputChange }) => (
+  <EntryContainer>
+    <InputContainer>
+      <Input
+        value={url}
+        onChange={handleInputChange}
+        placeholder={placeholder}
+        data-testid="input-entry"
+        autoFocus
+      />
+    </InputContainer>
+  </EntryContainer>
+);
 
-  return (
-    <EntryContainer>
-      <InputContainer>
-        <Input
-          value={url}
-          onChange={handleInputChange}
-          placeholder={placeholder}
-          data-testid="input-entry"
-          autoFocus
-        />
-      </InputContainer>
-    </EntryContainer>
-  );
-}
-
+export default Entry;

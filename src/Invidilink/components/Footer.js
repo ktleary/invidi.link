@@ -37,14 +37,13 @@ const FooterLink = styled.a`
   }
 `;
 
-export default function Footer(props) {
-  const { toggleAbout } = props;
-  return (
-    <FooterContainer>
-      <FooterCell>GPLv3</FooterCell>
-      <FooterCell onClick={toggleAbout}>
-        <FooterLink data-testid="about-link">About & Privacy</FooterLink>
-      </FooterCell>
-    </FooterContainer>
-  );
-}
+const Footer = ({ toggleAbout }) => (
+  <FooterContainer>
+    <FooterCell>GPL-3</FooterCell>
+    <FooterCell onClick={toggleAbout}>
+      <FooterLink data-testid="about-link">About & Privacy</FooterLink>
+    </FooterCell>
+  </FooterContainer>
+);
+
+export default Footer;

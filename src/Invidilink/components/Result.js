@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { nanoid } from "nanoid";
 import Link from "./Link";
-import { replaceUri } from '../utils/http';
+import { replaceUri } from "../utils/http";
 
 const ResultContainer = styled.div`
   padding: 8px 8px;
@@ -17,22 +17,18 @@ const Display = styled.div`
   vertical-align: middle;
 `;
 
+const Result = ({ availableInstances, handleCopyLink, url }) => (
+  <ResultContainer>
+    <Display>
+      {availableInstances.map((availableInstance) => (
+        <Link
+          handleCopyLink={handleCopyLink}
+          link={replaceUri(url, availableInstance)}
+          key={nanoid()}
+        />
+      ))}
+    </Display>
+  </ResultContainer>
+);
 
-
-export default function Result(props) {
-  const { availableInstances, handleCopyLink, url } = props;
-
-  return (
-    <ResultContainer>
-      <Display>
-        {availableInstances.map((availableInstance) => (
-          <Link
-            handleCopyLink={handleCopyLink}
-            link={replaceUri(url, availableInstance)}
-            key={nanoid()}
-          />
-        ))}
-      </Display>
-    </ResultContainer>
-  );
-}
+export default Result;

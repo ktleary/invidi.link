@@ -63,22 +63,19 @@ const LinkCell = styled.div`
   hyphens: auto;
 `;
 
-export default function Link(props) {
-  const { link, handleCopyLink } = props;
-  return (
-    <>
-      <LinkContainer>
-        <LinkCell
-          onClick={() => handleCopyLink(link)}
-          title="Copy Link"
-          alt="Copy Link"
-        >
-          <CopyLinkButton data-testid="copy-button" />
-        </LinkCell>
-        <LinkCell>
-          <StyledLink href={link}>{link}</StyledLink>
-        </LinkCell>
-      </LinkContainer>
-    </>
-  );
-}
+const Link = ({ link, handleCopyLink }) => (
+  <LinkContainer>
+    <LinkCell
+      onClick={() => handleCopyLink(link)}
+      title="Copy Link"
+      alt="Copy Link"
+    >
+      <CopyLinkButton data-testid="copy-button" />
+    </LinkCell>
+    <LinkCell>
+      <StyledLink href={link}>{link}</StyledLink>
+    </LinkCell>
+  </LinkContainer>
+);
+
+export default Link;

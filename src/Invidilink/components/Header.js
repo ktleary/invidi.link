@@ -22,12 +22,12 @@ const HeaderLink = styled.a`
   text-decoration: none;
 `;
 
-export default function Header() {
-  return (
-    <HeaderContainer>
-      <HeaderLink href="https://invidi.link">
-        <Title>invidilink</Title>
-      </HeaderLink>
-    </HeaderContainer>
-  );
-}
+const Header = () => (
+  <HeaderContainer>
+    <HeaderLink href="https://invidi.link">
+      <Title>invidilink</Title>
+    </HeaderLink>
+  </HeaderContainer>
+);
+
+export default Header;

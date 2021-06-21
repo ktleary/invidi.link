@@ -12,7 +12,6 @@ const StatusContainer = styled.div`
   width: 100%;
 `;
 
-export default function Status(props) {
-  const { status } = props;
-  return <StatusContainer>{status}</StatusContainer>;
-}
+const Status = ({ status }) => <StatusContainer>{status}</StatusContainer>;
+
+export default Status;
