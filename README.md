@@ -19,7 +19,7 @@ Sample Results:
 -   `https://invidious.kavin.rocks/watch?v=sbFAcHteZd8`
 -   `https://invidiou.site/watch?v=sbFAcHteZd8`
 
-Features a copy button for easy use on mobile.
+Features a copy button for easy use on mobile and "GO RANDOM" to have the app automatically redirect users to a random available instance.
 
 Additionally, provide a "url" parameter to pre-populate the form:
 
@@ -27,7 +27,7 @@ https://invidi.link/?url=https://www.youtube.com/watch?v=iRXJXaLV0n4
 
 In the wild: https://invidi.link/
 
-![invidi.link screen](invidilink-screen.png)
+![invidi.link screen](invidi-link-random-screen.png)
 
 ### How it works
 

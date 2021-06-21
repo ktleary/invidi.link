@@ -7,4 +7,9 @@ const STATUS = Object.freeze({
   RETRIEVINGINSTANCES: "retrieving instances ...",
 });
 
-export { STATUS };
+const NAVTYPE = Object.freeze({
+  LIST: "list",
+  RANDOM: "random",
+});
+
+export { NAVTYPE, STATUS };

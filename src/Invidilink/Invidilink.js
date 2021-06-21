@@ -9,7 +9,7 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 import copyToClipboard from "./utils/clipboard";
 import { statusMessage } from "./utils/message";
-import { STATUS } from "./constants";
+import { NAVTYPE, STATUS } from "./constants";
 import { parseInstancesResult } from "./utils/instance-data";
 
 import {
@@ -33,13 +33,10 @@ const InvidilinkWrapper = styled.div`
   width: 100%;
 `;
 
-const NAVTYPE = Object.freeze({
-  LIST: "list",
-  RANDOM: "random",
-});
+
 
 function Invidilink() {
-  const [about, setAbout] = useState(false);
+  const [showAbout, setShowAbout] = useState(false);
   const [availableInstances, setAvailableInstances] = useState([]);
   const [url, setUrl] = useState("");
   const [navType, setNavType] = useState();
@@ -79,20 +76,21 @@ function Invidilink() {
 
   const handleReloadInstanceData = () => {};
 
-  // https://www.youtube.com/watch?v=P4p7prURvIk
 
   const feelingLucky = () => {
     document.location.href = getRandomUrl(availableInstances, url);
   };
-  const enableList = () => setNavType(NAVTYPE.LIST);
+  const enableList = () =>
+    navType === NAVTYPE.LIST ? setNavType("") : setNavType(NAVTYPE.LIST);
 
-  const toggleAbout = () => setAbout(!about);
+  const toggleAbout = () => setShowAbout(!showAbout);
   const showList = navType === NAVTYPE.LIST && validateUrl(url);
   const urlIsValid = validateUrl(url);
 
   return (
     <InvidilinkWrapper data-testid="invidilink-wrapper">
       <Header />
+
       <Entry handleInputChange={handleInputChange} url={url} />
       {showList && (
         <Result
@@ -110,7 +108,7 @@ function Invidilink() {
         urlIsValid={urlIsValid}
         enableList={enableList}
       />
-      {about && <About toggleAbout={toggleAbout} />}
+      {showAbout && <About toggleAbout={toggleAbout} />}
       <Footer data-testid="footer" toggleAbout={toggleAbout} />
     </InvidilinkWrapper>
   );
