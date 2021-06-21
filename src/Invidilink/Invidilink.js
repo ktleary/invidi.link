@@ -11,9 +11,11 @@ import copyToClipboard from "./utils/clipboard";
 import { statusMessage } from "./utils/message";
 import { STATUS } from "./constants";
 import { parseInstancesResult } from "./utils/instance-data";
+
 import {
   getAvailableInstances,
   getQueryString,
+  getRandomUrl,
   validateUrl,
 } from "./utils/http";
 
@@ -29,18 +31,19 @@ const InvidilinkWrapper = styled.div`
   padding-bottom: 24px;
   margin: 0;
   width: 100%;
-
 `;
+
+const NAVTYPE = Object.freeze({
+  LIST: "list",
+  RANDOM: "random",
+});
 
 function Invidilink() {
   const [about, setAbout] = useState(false);
   const [availableInstances, setAvailableInstances] = useState([]);
   const [url, setUrl] = useState("");
-
+  const [navType, setNavType] = useState();
   const [status, setStatus] = useState("");
-  const handleClear = () => {
-    setUrl("");
-  };
 
   async function handleCopyLink(link) {
     const message = (await copyToClipboard(link))
@@ -57,12 +60,6 @@ function Invidilink() {
     }, 2000);
   }
 
-  const handleInputChange = (e) => {
-    if (!e) return;
-    const { target } = e;
-    setUrl(target.value);
-  };
-
   useEffect(() => {
     async function fetchInstanceData() {
       setStatus(STATUS.RETRIEVINGINSTANCES);
@@ -77,20 +74,27 @@ function Invidilink() {
     fetchInstanceData();
   }, []);
 
-  const handleReloadInstanceData = async () => {
-    // fetchInstanceData();
-  };
+  const handleInputChange = (event) => event && setUrl(event.target.value);
+  const handleClear = () => setUrl("");
 
-  const toggleAbout = () => {
-    const val = !about;
-    setAbout(val);
+  const handleReloadInstanceData = () => {};
+
+  // https://www.youtube.com/watch?v=P4p7prURvIk
+
+  const feelingLucky = () => {
+    document.location.href = getRandomUrl(availableInstances, url);
   };
+  const enableList = () => setNavType(NAVTYPE.LIST);
+
+  const toggleAbout = () => setAbout(!about);
+  const showList = navType === NAVTYPE.LIST && validateUrl(url);
+  const urlIsValid = validateUrl(url);
 
   return (
     <InvidilinkWrapper data-testid="invidilink-wrapper">
       <Header />
       <Entry handleInputChange={handleInputChange} url={url} />
-      {validateUrl(url) && (
+      {showList && (
         <Result
           availableInstances={availableInstances}
           handleCopyLink={handleCopyLink}
@@ -102,6 +106,9 @@ function Invidilink() {
         url={url}
         handleClear={handleClear}
         handleReload={handleReloadInstanceData}
+        feelingLucky={feelingLucky}
+        urlIsValid={urlIsValid}
+        enableList={enableList}
       />
       {about && <About toggleAbout={toggleAbout} />}
       <Footer data-testid="footer" toggleAbout={toggleAbout} />

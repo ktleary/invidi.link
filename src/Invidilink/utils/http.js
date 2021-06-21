@@ -1,4 +1,5 @@
 import { ENDPOINT } from "../api-config";
+import { getRandomListItem } from "./random";
 
 function getQueryString(queryParam = "url") {
   const search = window.location.search;
@@ -37,8 +38,15 @@ const validateUrl = (string) => {
   return true;
 };
 
+const getRandomUrl = (availableInstances, url) => {
+  const selectedInstanceLink = getRandomListItem(availableInstances);
+  const randomInstanceLink = replaceUri(url, selectedInstanceLink);
+  return randomInstanceLink;
+};
+
 export {
   getAvailableInstances,
+  getRandomUrl,
   getQueryString,
   replaceUri,
   validateUrl,

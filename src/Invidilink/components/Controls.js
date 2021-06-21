@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import ClearButton from "./buttons/ClearButton";
+import RandomButton from "./buttons/RandomButton";
+import ShowListButton from "./buttons/ShowListButton";
 import { ReloadButton } from "./buttons/ReloadButton";
 
 const enableReload = false; // not implementing on public site
@@ -13,10 +15,17 @@ const ButtonRow = styled.div`
 `;
 
 const ButtonContainer = styled.div`
-  margin: 8px 0;
+  margin: 8px 8px;
 `;
 
-const Controls = ({ handleClear, handleReload, url }) => (
+const Controls = ({
+  handleClear,
+  enableList,
+  feelingLucky,
+  handleReload,
+  url,
+  urlIsValid,
+}) => (
   <ButtonRow>
     <ButtonContainer>
       <ClearButton
@@ -24,8 +33,26 @@ const Controls = ({ handleClear, handleReload, url }) => (
         disabled={!url.length}
         data-testid="button-clear"
       >
-        Clear
+        CLEAR
       </ClearButton>
+    </ButtonContainer>
+    <ButtonContainer>
+      <ShowListButton
+        onClick={enableList}
+        disabled={!urlIsValid}
+        data-testid="button-random"
+      >
+        SHOW LIST
+      </ShowListButton>
+    </ButtonContainer>
+    <ButtonContainer>
+      <RandomButton
+        onClick={feelingLucky}
+        disabled={!urlIsValid}
+        data-testid="button-random"
+      >
+        GO RANDOM!
+      </RandomButton>
     </ButtonContainer>
     <ButtonContainer>
       {enableReload && (

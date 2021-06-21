@@ -1,4 +1,26 @@
-import { getQueryString, replaceUri, validateUrl } from "../../utils/http";
+import {
+  getQueryString,
+  getRandomUrl,
+  replaceUri,
+  validateUrl,
+} from "../../utils/http";
+
+test("it gets a randomUrl", () => {
+  const availableInstances = [
+    "https://domain1.xyz",
+    "https://domain2.xyz",
+    "https://domain3.xyz",
+  ];
+
+  const url = "https://www.youtube.com/watch?v=P4p7prURvIk";
+  const randomUrl = getRandomUrl(availableInstances, url);
+  const foundInstance = availableInstances.filter(
+    (instance) => randomUrl.indexOf(instance) > -1
+  );
+
+
+  expect(foundInstance.length).toBeGreaterThan(0);
+});
 
 test("it substitutes the host in the supplied link", () => {
   const url = "https://inviodus.snoptya.org/watch?v=123";
