@@ -82,38 +82,34 @@ const SubtitleContainer = styled.div`
   vertical-align: middle;
 `;
 
-export default function About(props) {
-  const { toggleAbout } = props;
-  return (
-    <AboutContainer>
-      <AboutHeader>
-        <SubtitleContainer>About</SubtitleContainer>
-        <CloseContainer onClick={toggleAbout} data-testid="button-close">
-          <CloseAboutButton   />
-        </CloseContainer>
-      </AboutHeader>
-      <AboutContent>
-        <div>
-          invidilink is a free, open-source tool written in React and licensed
-          under GPLv3.
-        </div>
-        <p>
-          invidi.link repects user privacy. No analytics or third-party trackers
-          are used and no data is sent to the server. The application works by
-          downloading server uptime data from invidious.io and all transformed
-          urls are created in the browser.
-        </p>
-        <p>
-          To report an issue, contribute or contact development, please visit:
-          &nbsp;
-          <AboutLink
-            target="_blank"
-            href="https://sr.ht/~djlooop/invidi.link/"
-          >
-            https://sr.ht/~djlooop/invidi.link/
-          </AboutLink>
-        </p>
-      </AboutContent>
-    </AboutContainer>
-  );
-}
+const About = ({ toggleAbout }) => (
+  <AboutContainer>
+    <AboutHeader>
+      <SubtitleContainer>About</SubtitleContainer>
+      <CloseContainer onClick={toggleAbout} data-testid="button-close">
+        <CloseAboutButton />
+      </CloseContainer>
+    </AboutHeader>
+    <AboutContent>
+      <div>
+        invidilink is a free, open-source tool written in React and licensed
+        under GPLv3.
+      </div>
+      <p>
+        invidi.link repects user privacy. No analytics or third-party trackers
+        are used and no data is sent to the server. The application works by
+        downloading server uptime data from invidious.io and all transformed
+        urls are created in the browser.
+      </p>
+      <p>
+        To report an issue, contribute or contact development, please visit:
+        &nbsp;
+        <AboutLink target="_blank" href="https://sr.ht/~djlooop/invidi.link/">
+          https://sr.ht/~djlooop/invidi.link/
+        </AboutLink>
+      </p>
+    </AboutContent>
+  </AboutContainer>
+);
+
+export default About;
