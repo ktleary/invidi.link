@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import ClearButton from "./ClearButton";
-import { ReloadButton } from "./ReloadButton";
+import ClearButton from "./buttons/ClearButton";
+import { ReloadButton } from "./buttons/ReloadButton";
 
 const enableReload = false; // not implementing on public site
 

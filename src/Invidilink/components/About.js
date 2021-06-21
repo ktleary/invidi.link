@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import CloseButton from "./CloseButton";
+import CloseButton from "./buttons/CloseButton";
 
 const AboutContainer = styled.div`
   background: #333;

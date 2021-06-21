@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import CopyButton from "./CopyButton";
+import CopyButton from "./buttons/CopyButton";
 
 const CopyLinkButton = styled(CopyButton)`
   color: rgba(255, 255, 255, 0.5);
