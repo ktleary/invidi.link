@@ -11,11 +11,10 @@ import copyToClipboard from "./utils/clipboard";
 import { statusMessage } from "./utils/message";
 import { NAVTYPE, STATUS } from "./constants";
 import { parseInstancesResult } from "./utils/instance-data";
-
+import { feelingLucky } from "./utils/random";
 import {
   getAvailableInstances,
   getQueryString,
-  getRandomUrl,
   validateUrl,
 } from "./utils/http";
 
@@ -32,8 +31,6 @@ const InvidilinkWrapper = styled.div`
   margin: 0;
   width: 100%;
 `;
-
-
 
 function Invidilink() {
   const [showAbout, setShowAbout] = useState(false);
@@ -76,10 +73,6 @@ function Invidilink() {
 
   const handleReloadInstanceData = () => {};
 
-
-  const feelingLucky = () => {
-    document.location.href = getRandomUrl(availableInstances, url);
-  };
   const enableList = () =>
     navType === NAVTYPE.LIST ? setNavType("") : setNavType(NAVTYPE.LIST);
 
@@ -90,21 +83,21 @@ function Invidilink() {
   return (
     <InvidilinkWrapper data-testid="invidilink-wrapper">
       <Header />
-
       <Entry handleInputChange={handleInputChange} url={url} />
-      {showList && (
-        <Result
-          availableInstances={availableInstances}
-          handleCopyLink={handleCopyLink}
-          url={url}
-        />
-      )}
+
+      <Result
+        availableInstances={availableInstances}
+        handleCopyLink={handleCopyLink}
+        url={url}
+        showList={showList}
+      />
+
       <Status status={status} />
       <Controls
         url={url}
         handleClear={handleClear}
         handleReload={handleReloadInstanceData}
-        feelingLucky={feelingLucky}
+        feelingLucky={feelingLucky(availableInstances, url)}
         urlIsValid={urlIsValid}
         enableList={enableList}
       />
