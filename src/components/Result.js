@@ -19,19 +19,18 @@ const Display = styled.div`
 
 const id = nanoid();
 
-const Result = ({ availableInstances, handleCopyLink, showList, url }) =>
-  showList ? (
-    <ResultContainer>
-      <Display>
-        {availableInstances.map((availableInstance, idx) => (
-          <Link
-            handleCopyLink={handleCopyLink}
-            link={replaceUri(url, availableInstance)}
-            key={`result-${id}-${idx}`}
-          />
-        ))}
-      </Display>
-    </ResultContainer>
-  ) : null;
+const Result = ({ availableInstances, handleCopyLink, url }) => (
+  <ResultContainer>
+    <Display>
+      {availableInstances.map((availableInstance, idx) => (
+        <Link
+          handleCopyLink={handleCopyLink}
+          link={replaceUri(url, availableInstance)}
+          key={`result-${id}-${idx}`}
+        />
+      ))}
+    </Display>
+  </ResultContainer>
+);
 
 export default Result;

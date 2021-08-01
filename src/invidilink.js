@@ -68,10 +68,8 @@ function Invidilink() {
     fetchInstanceData();
   }, []);
 
-  const handleInputChange = (event) => event && setUrl(event.target.value);
+  const handleInputChange = (event) => setUrl(event.target.value);
   const handleClear = () => setUrl("");
-
-  const handleReloadInstanceData = () => {};
 
   const enableList = () =>
     navType === NAVTYPE.LIST ? setNavType("") : setNavType(NAVTYPE.LIST);
@@ -84,19 +82,18 @@ function Invidilink() {
     <InvidilinkWrapper data-testid="invidilink-wrapper">
       <Header />
       <Entry handleInputChange={handleInputChange} url={url} />
-
-      <Result
-        availableInstances={availableInstances}
-        handleCopyLink={handleCopyLink}
-        url={url}
-        showList={showList}
-      />
-
+      {showList && (
+        <Result
+          availableInstances={availableInstances}
+          handleCopyLink={handleCopyLink}
+          url={url}
+          showList={showList}
+        />
+      )}
       <Status status={status} />
       <Controls
         url={url}
         handleClear={handleClear}
-        handleReload={handleReloadInstanceData}
         feelingLucky={feelingLucky(availableInstances, url)}
         urlIsValid={urlIsValid}
         enableList={enableList}

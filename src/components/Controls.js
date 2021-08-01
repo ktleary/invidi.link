@@ -3,9 +3,6 @@ import styled from "styled-components";
 import ClearButton from "./buttons/ClearButton";
 import RandomButton from "./buttons/RandomButton";
 import ShowListButton from "./buttons/ShowListButton";
-import { ReloadButton } from "./buttons/ReloadButton";
-
-const enableReload = false; // not implementing on public site
 
 const ButtonRow = styled.div`
   display: flex;
@@ -22,7 +19,6 @@ const Controls = ({
   handleClear,
   enableList,
   feelingLucky,
-  handleReload,
   url,
   urlIsValid,
 }) => (
@@ -53,11 +49,6 @@ const Controls = ({
       >
         GO RANDOM!
       </RandomButton>
-    </ButtonContainer>
-    <ButtonContainer>
-      {enableReload && (
-        <ReloadButton onClick={handleReload}>Reload</ReloadButton>
-      )}
     </ButtonContainer>
   </ButtonRow>
 );
