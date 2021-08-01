@@ -1,4 +1,4 @@
-import Invidilink from "./Invidilink/Invidilink";
+import Invidilink from "./invidilink";
 
 const App = () => <Invidilink data-testid="invidilink" />;
 

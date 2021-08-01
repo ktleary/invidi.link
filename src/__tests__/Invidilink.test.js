@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Invidilink from "../Invidilink";
+import Invidilink from "../invidilink";
 
 test("renders invidilink header", () => {
   render(<Invidilink />);
