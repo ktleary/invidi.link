@@ -2,14 +2,14 @@ import React from "react";
 import styled from "styled-components";
 
 const FooterContainer = styled.div`
-  background: #1b1b1b;
+  background: rgba(37, 43, 59, 1);
   display: flex;
   height: 24px;
   justify-content: center;
   padding: 8px;
   opacity: 1;
   /* stick to bottom */
-  position: absolute;
+  position: fixed;
   left: 0;
   bottom: 0;
   right: 0;

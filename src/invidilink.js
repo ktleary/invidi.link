@@ -19,7 +19,7 @@ import {
 } from "./utils/http";
 
 const InvidilinkWrapper = styled.div`
-  background: #1b1b1b;
+  background: rgba(37, 43, 59, 1);
   border: 0;
   color: rgba(255, 255, 255, 0.87);
   font-family: sans-serif;

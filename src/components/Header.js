@@ -11,10 +11,19 @@ const HeaderContainer = styled.div`
 const Title = styled.h1`
   color: rgba(255, 255, 255, 0.666);
   margin: auto;
-  font-size: 32px;
+  font-size: 40px;
   font-family: sans-serif;
   font-weight: normal;
 `;
+
+const SubTitle = styled.h1`
+  color: rgba(255, 255, 255, 0.666);
+  margin: 16px auto;
+  font-size: 24px;
+  font-family: sans-serif;
+  font-weight: normal;
+`;
+
 
 const HeaderLink = styled.a`
   color: rgba(255, 255, 255, 0.666);
@@ -25,7 +34,8 @@ const HeaderLink = styled.a`
 const Header = () => (
   <HeaderContainer>
     <HeaderLink href="https://invidi.link">
-      <Title>invidilink</Title>
+      <Title>invidi.link</Title>
+      <SubTitle>Convert YouTube links to Invidious.</SubTitle>
     </HeaderLink>
   </HeaderContainer>
 );

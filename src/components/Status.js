@@ -6,7 +6,7 @@ const StatusContainer = styled.div`
   color: rgba(255, 255, 255, 0.33);
   font-size: 14px;
   height: 14px;
-  margin: 0 auto 16px auto;
+  margin: 8px auto 24px auto;
   padding: 0;
   text-align: center;
   width: 100%;

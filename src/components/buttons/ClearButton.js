@@ -5,9 +5,9 @@ const ClearButton = styled.button`
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   color: rgba(255, 255, 255, 0.78);
-  height: 40px;
+  height: 32px;
   outline: 0;
-  width: 60px;
+  width: 100%;
     &:hover {
     background: rgba(13, 71, 161, 0.87);
     border: 1px solid rgba(255, 255, 255, 0.87);

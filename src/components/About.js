@@ -3,13 +3,12 @@ import styled from "styled-components";
 import CloseButton from "./buttons/CloseButton";
 
 const AboutContainer = styled.div`
-  background: #333;
-
+  background: rgba(40, 46, 65, 1);
   font-size: 14px;
   margin: auto;
   max-width: 350px;
   opacity: 1;
-  padding: 0 8px;
+  padding: 0;
   position: absolute;
   bottom: 24px;
   right: 0;
