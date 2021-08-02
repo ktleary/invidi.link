@@ -3,7 +3,7 @@ import Invidilink from "../invidilink";
 
 test("renders invidilink header", () => {
   render(<Invidilink />);
-  const linkElement = screen.getByText(/invidilink/i);
+  const linkElement = screen.getByText(/invidi.link/i);
   expect(linkElement).toBeInTheDocument();
 });
 
