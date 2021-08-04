@@ -1,7 +1,7 @@
 {
   "name": "invidi.link",
   "description": "Create invidious links from YouTube urls.",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -32,11 +32,12 @@
     ]
   },
   "keywords": [
-    "invidilink",
-    "invidious",
-    "invidio.us",
-    "invidious.io",
     "alternative",
+    "invidi.link",
+    "invidilink",
+    "invidio.us",
+    "invidious",
+    "invidious.io",
     "youtube"
   ],
   "license": "GPL-3.0-or-later",
