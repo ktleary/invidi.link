@@ -24,10 +24,6 @@ test("it renders Controls", () => {
     url: "https://abc.xyz?v=123",
   };
   render(
-    <Controls
-      handleClear={handleClear}
-      handleReload={handleReload}
-      url={url}
-    />
+    <Controls handleClear={handleClear} handleReload={handleReload} url={url} />
   );
 });
