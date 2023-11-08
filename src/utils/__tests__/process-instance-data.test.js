@@ -11,7 +11,7 @@ test("parseInstancesResult returns successful message", () => {
 });
 
 test("parseInstancesResult returns bad data message", () => {
-  const [message, instances] = parseInstancesResult({error: "TypeError"});
+  const [message, instances] = parseInstancesResult({ error: "TypeError" });
   expect(message).toBe("The remote data could not be read.");
   expect(instances.length).toBe(0);
 });
@@ -34,26 +34,26 @@ test("processInstancesData returns an empty array when invalid instance data is 
   expect(availableInstances).toEqual(expect.arrayContaining([]));
 });
 
-test("processInstancesData returns a TypeError when when a garbage string is returned from the api", () => {
+test("processInstancesData returns undefined when when a garbage string is returned from the api", () => {
   const availableInstances = processInstancesData("88kdkd ^^^^ _ & 7");
 
-  expect(availableInstances.error).toEqual("TypeError");
+  expect(availableInstances.error).toEqual(undefined);
 });
 
-test("processInstancesData returns a ___ error when when a promise is returned from the api", () => {
+test("processInstancesData returns undefined when when a promise is returned from the api", () => {
   const availableInstances = processInstancesData("");
 
-  expect(availableInstances.error).toEqual("TypeError");
+  expect(availableInstances.error).toEqual(undefined);
 });
 
-test("processInstancesData returns a TypeError when an undefined element is returned from the api", () => {
+test("processInstancesData returns undefined when an undefined element is returned from the api", () => {
   const availableInstances = processInstancesData(["", {}]);
 
-  expect(availableInstances.error).toEqual("TypeError");
+  expect(availableInstances.error).toEqual(undefined);
 });
 
-test("processInstancesData returns an errors when nothing is passed from the api", () => {
+test("processInstancesData returns undefined when nothing is passed from the api", () => {
   const availableInstances = processInstancesData();
 
-  expect(availableInstances.error).toEqual("TypeError");
+  expect(availableInstances.error).toEqual(undefined);
 });
