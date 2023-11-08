@@ -9,17 +9,15 @@ function getQueryString(queryParam = "url") {
 }
 
 async function getAvailableInstances() {
-  return await fetch(ENDPOINT)
-    .then((response) => {
-      if (!response.ok) {
-        throw Error(response.statusText);
-      }
-      return response.json();
-    })
-    .catch((err) => {
-      const { name } = err;
-      return { error: name };
-    });
+  try {
+    const response = await fetch(ENDPOINT);
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    }
+    return await response.json();
+  } catch (err) {
+    return { error: err.name };
+  }
 }
 
 function replaceUri(original, replacement) {
