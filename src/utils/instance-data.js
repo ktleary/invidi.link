@@ -1,31 +1,33 @@
-import { statusMessage } from './message';
-import { STATUS } from '../constants';
+import { statusMessage } from "./message";
+import { STATUS } from "../constants";
+import { nth } from "lodash";
 
-function processInstancesData(instancesData) {
-  try {
-    return instancesData
-      .filter(
-        (instanceData) =>
-          instanceData[1].stats &&
-          instanceData[1].stats.version &&
-          instanceData[1].monitor &&
-          instanceData[1].monitor.statusClass === "success"
-      )
-      .map((successInstance) => successInstance[1].uri);
-  } catch (e) {
-    const { name } = e;
-    return { error: name };
-  }
-}
+const getVersionStatusClassUri = (instanceData) => {
+  const vitals = nth(instanceData, 1);
+  const { stats, monitor, uri } = vitals || {};
+  const { statusClass } = monitor || {};
+  const { version } = stats || {};
+  return { version, statusClass, uri };
+};
+
+const getSuccessUris = (acc, instanceData) => {
+  const { version, statusClass, uri } = getVersionStatusClassUri(instanceData);
+  return version && statusClass === "success" ? [...acc, uri] : acc;
+};
+
+const processInstancesData = (instancesData = []) =>
+  Array.isArray(instancesData) ? instancesData.reduce(getSuccessUris, []) : [];
 
 function parseInstancesResult(result) {
-  const instances = !result.error ? processInstancesData(result) : [];
-  let message = !result.error
-    ? statusMessage({
-        type: STATUS.INSTANCESAVAILABLE,
-        quantity: instances.length,
-      })
-    : statusMessage({ type: STATUS.BADDATA });
+  if (result.error) {
+    return [statusMessage({ type: STATUS.BADDATA }), []];
+  }
+  const instances = processInstancesData(result);
+  let message = statusMessage({
+    type: STATUS.INSTANCESAVAILABLE,
+    quantity: instances?.length || 0,
+  });
+
   return [message, instances];
 }
 
