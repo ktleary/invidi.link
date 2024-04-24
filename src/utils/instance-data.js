@@ -151,7 +151,6 @@ function parseInstancesResult(result) {
   if (result.error) {
     return [statusMessage({ type: STATUS.BADDATA }), []];
   }
-
   const instances = processInstancesData(result);
   let message = statusMessage({
     type: STATUS.INSTANCESAVAILABLE,
