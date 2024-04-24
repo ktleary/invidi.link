@@ -1,13 +1,13 @@
+import instanceData from "../../../data/instance-data"; // updated data with the new response structure
 import {
   parseInstancesResult,
   processInstancesData,
 } from "../../utils/instance-data";
-import instanceData from "../../../data/instance-data-sample";
 
 test("parseInstancesResult returns successful message", () => {
   const [message, instances] = parseInstancesResult(instanceData);
-  expect(message).toBe("6 instances are available.");
-  expect(instances.length).toBe(6);
+  expect(message).toBe("25 instances are available.");
+  expect(instances.length).toBe(25);
 });
 
 test("parseInstancesResult returns bad data message", () => {
@@ -18,7 +18,8 @@ test("parseInstancesResult returns bad data message", () => {
 
 test("processInstancesData returns the successful available instances", () => {
   const availableInstances = processInstancesData(instanceData);
-  const successfulInstance = "https://invidious.snopyta.org/";
+  const successfulInstance = "https://invidious.fdn.fr";
+
   expect(availableInstances).toContain(successfulInstance);
 });
 
