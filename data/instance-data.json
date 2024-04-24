@@ -1,0 +1,1769 @@
+[
+  [
+    "invidious.fdn.fr",
+    {
+      "flag": "🇫🇷",
+      "region": "FR",
+      "stats": {
+        "version": "2.0",
+        "software": {
+          "name": "invidious",
+          "version": "2024.04.14-8097d81f",
+          "branch": "master"
+        },
+        "openRegistrations": true,
+        "usage": {
+          "users": {
+            "total": 35385,
+            "activeHalfyear": 7168,
+            "activeMonth": 1182
+          }
+        },
+        "metadata": {
+          "updatedAt": 1713828607,
+          "lastChannelRefreshedAt": 1713828586
+        },
+        "playback": {
+          "totalRequests": 4167,
+          "successfulRequests": 1778,
+          "ratio": 0.43
+        }
+      },
+      "cors": true,
+      "api": true,
+      "type": "https",
+      "uri": "https://invidious.fdn.fr",
+      "monitor": {
+        "token": "so3l",
+        "url": "https://invidious.fdn.fr",
+        "alias": "invidious.fdn.fr",
+        "last_status": 200,
+        "uptime": 100.0,
+        "down": false,
+        "down_since": null,
+        "up_since": "2024-04-22T19:11:47Z",
+        "error": null,
+        "period": 300,
+        "apdex_t": 1.0,
+        "string_match": "An alternative front-end to YouTube",
+        "enabled": true,
+        "published": true,
+        "disabled_locations": [],
+        "recipients": [],
+        "last_check_at": "2024-04-22T23:26:09Z",
+        "next_check_at": "2024-04-22T23:31:08Z",
+        "created_at": "2024-04-21T20:49:56Z",
+        "mute_until": "forever",
+        "favicon_url": "https://invidious.fdn.fr/favicon-16x16.png?v=e0ce59d3",
+        "custom_headers": {},
+        "http_verb": "GET/HEAD",
+        "http_body": "",
+        "ssl": {
+          "tested_at": "2024-04-22T23:16:13Z",
+          "expires_at": "2024-07-10T17:13:05Z",
+          "valid": true,
+          "error": null
+        }
+      }
+    }
+  ],
+  [
+    "vid.puffyan.us",
+    {
+      "flag": "🇺🇸",
+      "region": "US",
+      "stats": {
+        "version": "2.0",
+        "software": {
+          "name": "invidious",
+          "version": "2024.04.10-b673695",
+          "branch": "master"
+        },
+        "openRegistrations": true,
+        "usage": {
+          "users": {
+            "total": 21779,
+            "activeHalfyear": 4848,
+            "activeMonth": 674
+          }
+        },
+        "metadata": {
+          "updatedAt": 1713828078,
+          "lastChannelRefreshedAt": 1713825875
+        },
+        "playback": {}
+      },
+      "cors": true,
+      "api": true,
+      "type": "https",
+      "uri": "https://vid.puffyan.us",
+      "monitor": {
+        "token": "0szs",
+        "url": "https://vid.puffyan.us/",
+        "alias": "vid.puffyan.us",
+        "last_status": 200,
+        "uptime": 100.0,
+        "down": false,
+        "down_since": null,
+        "up_since": "2024-04-21T02:42:09Z",
+        "error": null,
+        "period": 300,
+        "apdex_t": 1.0,
+        "string_match": "An alternative front-end to YouTube",
+        "enabled": true,
+        "published": true,
+        "disabled_locations": [],
+        "recipients": [],
+        "last_check_at": "2024-04-22T23:26:27Z",
+        "next_check_at": "2024-04-22T23:31:26Z",
+        "created_at": "2024-04-02T14:07:59Z",
+        "mute_until": null,
+        "favicon_url": "https://vid.puffyan.us/favicon-16x16.png?v=b673695",
+        "custom_headers": {},
+        "http_verb": "GET/HEAD",
+        "http_body": "",
+        "ssl": {
+          "tested_at": "2024-04-22T22:41:45Z",
+          "expires_at": "2024-05-25T13:18:32Z",
+          "valid": true,
+          "error": null
+        }
+      }
+    }
+  ],
+  [
+    "invidious.nerdvpn.de",
+    {
+      "flag": "🇺🇦",
+      "region": "UA",
+      "stats": {
+        "version": "2.0",
+        "software": {
+          "name": "invidious",
+          "version": "2024.04.10-b673695",
+          "branch": "master"
+        },
+        "openRegistrations": true,
+        "usage": {
+          "users": { "total": 5690, "activeHalfyear": 2274, "activeMonth": 180 }
+        },
+        "metadata": {
+          "updatedAt": 1713828605,
+          "lastChannelRefreshedAt": 1713826224
+        },
+        "playback": {}
+      },
+      "cors": true,
+      "api": true,
+      "type": "https",
+      "uri": "https://invidious.nerdvpn.de",
+      "monitor": {
+        "token": "oo85",
+        "url": "https://invidious.nerdvpn.de",
+        "alias": "invidious.nerdvpn.de",
+        "last_status": 200,
+        "uptime": 100.0,
+        "down": false,
+        "down_since": null,
+        "up_since": "2024-04-22T19:38:38Z",
+        "error": null,
+        "period": 300,
+        "apdex_t": 1.0,
+        "string_match": "An alternative front-end to YouTube",
+        "enabled": true,
+        "published": true,
+        "disabled_locations": [],
+        "recipients": ["email:2371453714"],
+        "last_check_at": "2024-04-22T23:27:49Z",
+        "next_check_at": "2024-04-22T23:32:46Z",
+        "created_at": "2024-04-21T20:52:06Z",
+        "mute_until": "forever",
+        "favicon_url": "https://invidious.nerdvpn.de/favicon-16x16.png?v=b673695",
+        "custom_headers": {},
+        "http_verb": "GET/HEAD",
+        "http_body": "",
+        "ssl": {
+          "tested_at": "2024-04-22T23:17:56Z",
+          "expires_at": "2024-09-07T21:59:00Z",
+          "valid": true,
+          "error": null
+        }
+      }
+    }
+  ],
+  [
+    "invidious.projectsegfau.lt",
+    {
+      "flag": "🇩🇪",
+      "region": "DE",
+      "stats": {
+        "version": "2.0",
+        "software": {
+          "name": "invidious",
+          "version": "2024.04.10-b673695",
+          "branch": "master"
+        },
+        "openRegistrations": true,
+        "usage": {
+          "users": { "total": 4770, "activeHalfyear": 1043, "activeMonth": 105 }
+        },
+        "metadata": {
+          "updatedAt": 1713828606,
+          "lastChannelRefreshedAt": 1713824783
+        },
+        "playback": {}
+      },
+      "cors": true,
+      "api": true,
+      "type": "https",
+      "uri": "https://invidious.projectsegfau.lt",
+      "monitor": {
+        "token": "bimt",
+        "url": "https://invidious.projectsegfau.lt",
+        "alias": "invidious.projectsegfau.lt",
+        "last_status": 200,
+        "uptime": 99.031,
+        "down": false,
+        "down_since": null,
+        "up_since": "2024-04-22T22:03:17Z",
+        "error": null,
+        "period": 300,
+        "apdex_t": 1.0,
+        "string_match": "An alternative front-end to YouTube",
+        "enabled": true,
+        "published": true,
+        "disabled_locations": [],
+        "recipients": ["email:2371453714"],
+        "last_check_at": "2024-04-22T23:27:54Z",
+        "next_check_at": "2024-04-22T23:32:52Z",
+        "created_at": "2024-04-21T22:27:31Z",
+        "mute_until": "forever",
+        "favicon_url": "https://invidious.projectsegfau.lt/favicon-16x16.png?v=b673695",
+        "custom_headers": {},
+        "http_verb": "GET/HEAD",
+        "http_body": "",
+        "ssl": {
+          "tested_at": "2024-04-22T23:27:58Z",
+          "expires_at": "2024-07-08T06:55:07Z",
+          "valid": true,
+          "error": null
+        }
+      }
+    }
+  ],
+  [
+    "invidious.lunar.icu",
+    {
+      "flag": "🇩🇪",
+      "region": "DE",
+      "stats": {
+        "version": "2.0",
+        "software": {
+          "name": "invidious",
+          "version": "2024.04.10-b673695",
+          "branch": "master"
+        },
+        "openRegistrations": true,
+        "usage": {
+          "users": { "total": 3790, "activeHalfyear": 2233, "activeMonth": 303 }
+        },
+        "metadata": {
+          "updatedAt": 1713828123,
+          "lastChannelRefreshedAt": 1713824268
+        },
+        "playback": {}
+      },
+      "cors": true,
+      "api": true,
+      "type": "https",
+      "uri": "https://invidious.lunar.icu",
+      "monitor": {
+        "token": "rjma",
+        "url": "https://invidious.lunar.icu",
+        "alias": "invidious.lunar.icu",
+        "last_status": 200,
+        "uptime": 100.0,
+        "down": false,
+        "down_since": null,
+        "up_since": "2024-04-22T11:45:41Z",
+        "error": null,
+        "period": 300,
+        "apdex_t": 1.0,
+        "string_match": "An alternative front-end to YouTube",
+        "enabled": true,
+        "published": true,
+        "disabled_locations": [],
+        "recipients": ["email:2371453714"],
+        "last_check_at": "2024-04-22T23:28:01Z",
+        "next_check_at": "2024-04-22T23:32:59Z",
+        "created_at": "2024-04-21T20:52:19Z",
+        "mute_until": "forever",
+        "favicon_url": "https://invidious.lunar.icu/favicon-16x16.png?v=b673695",
+        "custom_headers": {},
+        "http_verb": "GET/HEAD",
+        "http_body": "",
+        "ssl": {
+          "tested_at": "2024-04-22T23:18:07Z",
+          "expires_at": "2024-05-31T19:04:06Z",
+          "valid": true,
+          "error": null
+        }
+      }
+    }
+  ],
+  [
+    "inv.tux.pizza",
+    {
+      "flag": "🇺🇸",
+      "region": "US",
+      "stats": {
+        "version": "2.0",
+        "software": {
+          "name": "invidious",
+          "version": "2024.03.31-08390ac",
+          "branch": "master"
+        },
+        "openRegistrations": true,
+        "usage": {
+          "users": { "total": 3430, "activeHalfyear": 1746, "activeMonth": 240 }
+        },
+        "metadata": {
+          "updatedAt": 1713807510,
+          "lastChannelRefreshedAt": 1713807132
+        },
+        "playback": {
+          "totalRequests": 27,
+          "successfulRequests": 22,
+          "ratio": 0.81
+        }
+      },
+      "cors": true,
+      "api": true,
+      "type": "https",
+      "uri": "https://inv.tux.pizza",
+      "monitor": {
+        "token": "kvzi",
+        "url": "https://inv.tux.pizza",
+        "alias": "inv.tux.pizza",
+        "last_status": 200,
+        "uptime": 100.0,
+        "down": false,
+        "down_since": null,
+        "up_since": "2024-04-22T15:09:54Z",
+        "error": null,
+        "period": 300,
+        "apdex_t": 1.0,
+        "string_match": "An alternative front-end to YouTube",
+        "enabled": true,
+        "published": true,
+        "disabled_locations": [],
+        "recipients": ["email:2371453714"],
+        "last_check_at": "2024-04-22T23:27:56Z",
+        "next_check_at": "2024-04-22T23:32:53Z",
+        "created_at": "2024-04-21T20:52:28Z",
+        "mute_until": "forever",
+        "favicon_url": "https://inv.tux.pizza/favicon-16x16.png?v=08390ac",
+        "custom_headers": {},
+        "http_verb": "GET/HEAD",
+        "http_body": "",
+        "ssl": {
+          "tested_at": "2024-04-22T23:17:59Z",
+          "expires_at": "2024-06-05T16:02:01Z",
+          "valid": true,
+          "error": null
+        }
+      }
+    }
+  ],
+  [
+    "invidious.privacydev.net",
+    {
+      "flag": "🇫🇷",
+      "region": "FR",
+      "stats": {
+        "version": "2.0",
+        "software": {
+          "name": "invidious",
+          "version": "2024.04.10-b673695a",
+          "branch": "master"
+        },
+        "openRegistrations": true,
+        "usage": {
+          "users": { "total": 2734, "activeHalfyear": 1334, "activeMonth": 283 }
+        },
+        "metadata": {
+          "updatedAt": 1713828602,
+          "lastChannelRefreshedAt": 1713812318
+        },
+        "playback": {}
+      },
+      "cors": true,
+      "api": true,
+      "type": "https",
+      "uri": "https://invidious.privacydev.net",
+      "monitor": {
+        "token": "t1nl",
+        "url": "https://invidious.privacydev.net",
+        "alias": "invidious.privacydev.net",
+        "last_status": 200,
+        "uptime": 100.0,
+        "down": false,
+        "down_since": null,
+        "up_since": "2024-04-22T22:43:50Z",
+        "error": null,
+        "period": 300,
+        "apdex_t": 1.0,
+        "string_match": "An alternative front-end to YouTube",
+        "enabled": true,
+        "published": true,
+        "disabled_locations": [],
+        "recipients": ["email:2371453714"],
+        "last_check_at": "2024-04-22T23:28:41Z",
+        "next_check_at": "2024-04-22T23:33:38Z",
+        "created_at": "2024-04-21T20:52:47Z",
+        "mute_until": "forever",
+        "favicon_url": "https://invidious.privacydev.net/favicon-16x16.png?v=e0ce59d3",
+        "custom_headers": {},
+        "http_verb": "GET/HEAD",
+        "http_body": "",
+        "ssl": {
+          "tested_at": "2024-04-22T22:58:51Z",
+          "expires_at": "2024-05-20T19:49:15Z",
+          "valid": true,
+          "error": null
+        }
+      }
+    }
+  ],
+  [
+    "iv.ggtyler.dev",
+    {
+      "flag": "🇺🇸",
+      "region": "US",
+      "stats": {
+        "version": "2.0",
+        "software": {
+          "name": "invidious",
+          "version": "2024.04.10-b673695",
+          "branch": "master"
+        },
+        "openRegistrations": true,
+        "usage": {
+          "users": { "total": 2685, "activeHalfyear": 2254, "activeMonth": 286 }
+        },
+        "metadata": {
+          "updatedAt": 1713828063,
+          "lastChannelRefreshedAt": 1713819056
+        },
+        "playback": {}
+      },
+      "cors": true,
+      "api": true,
+      "type": "https",
+      "uri": "https://iv.ggtyler.dev",
+      "monitor": {
+        "token": "5dsh",
+        "url": "https://iv.ggtyler.dev",
+        "alias": "iv.ggtyler.dev",
+        "last_status": 200,
+        "uptime": 100.0,
+        "down": false,
+        "down_since": null,
+        "up_since": "2024-04-21T20:53:02Z",
+        "error": null,
+        "period": 300,
+        "apdex_t": 1.0,
+        "string_match": "An alternative front-end to YouTube",
+        "enabled": true,
+        "published": true,
+        "disabled_locations": [],
+        "recipients": ["email:2371453714"],
+        "last_check_at": "2024-04-22T23:28:16Z",
+        "next_check_at": "2024-04-22T23:33:14Z",
+        "created_at": "2024-04-21T20:52:56Z",
+        "mute_until": "forever",
+        "favicon_url": "https://iv.ggtyler.dev/favicon-16x16.png?v=b673695",
+        "custom_headers": {},
+        "http_verb": "GET/HEAD",
+        "http_body": "",
+        "ssl": {
+          "tested_at": "2024-04-22T23:23:18Z",
+          "expires_at": "2024-06-09T14:14:26Z",
+          "valid": true,
+          "error": null
+        }
+      }
+    }
+  ],
+  [
+    "inv.nadeko.net",
+    {
+      "flag": "🇨🇱",
+      "region": "CL",
+      "stats": {
+        "version": "2.0",
+        "software": {
+          "name": "invidious",
+          "version": "2024.04.16-1d5848d3",
+          "branch": "master"
+        },
+        "openRegistrations": true,
+        "usage": {
+          "users": { "total": 2058, "activeHalfyear": 1003, "activeMonth": 132 }
+        },
+        "metadata": {
+          "updatedAt": 1713828182,
+          "lastChannelRefreshedAt": 1713827987
+        },
+        "playback": {}
+      },
+      "cors": true,
+      "api": true,
+      "type": "https",
+      "uri": "https://inv.nadeko.net",
+      "monitor": {
+        "token": "sesu",
+        "url": "https://inv.nadeko.net",
+        "alias": "inv.nadeko.net",
+        "last_status": 200,
+        "uptime": 100.0,
+        "down": false,
+        "down_since": null,
+        "up_since": "2024-04-21T20:53:12Z",
+        "error": null,
+        "period": 300,
+        "apdex_t": 1.0,
+        "string_match": "An alternative front-end to YouTube",
+        "enabled": true,
+        "published": true,
+        "disabled_locations": [],
+        "recipients": ["email:2371453714"],
+        "last_check_at": "2024-04-22T23:26:33Z",
+        "next_check_at": "2024-04-22T23:31:32Z",
+        "created_at": "2024-04-21T20:53:06Z",
+        "mute_until": "forever",
+        "favicon_url": "https://inv.nadeko.net/favicon-16x16.png?v=aa96d34c",
+        "custom_headers": {},
+        "http_verb": "GET/HEAD",
+        "http_body": "",
+        "ssl": {
+          "tested_at": "2024-04-22T23:21:35Z",
+          "expires_at": "2024-04-28T16:44:13Z",
+          "valid": true,
+          "error": null
+        }
+      }
+    }
+  ],
+  [
+    "iv.nboeck.de",
+    {
+      "flag": "🇩🇪",
+      "region": "DE",
+      "stats": {
+        "version": "2.0",
+        "software": {
+          "name": "invidious",
+          "version": "2024.04.10-b673695",
+          "branch": "master"
+        },
+        "openRegistrations": true,
+        "usage": {
+          "users": { "total": 1917, "activeHalfyear": 1494, "activeMonth": 524 }
+        },
+        "metadata": {
+          "updatedAt": 1713828633,
+          "lastChannelRefreshedAt": 1713827556
+        },
+        "playback": {}
+      },
+      "cors": true,
+      "api": true,
+      "type": "https",
+      "uri": "https://iv.nboeck.de",
+      "monitor": {
+        "token": "mz6d",
+        "url": "https://iv.nboeck.de",
+        "alias": "iv.nboeck.de",
+        "last_status": 200,
+        "uptime": 100.0,
+        "down": false,
+        "down_since": null,
+        "up_since": "2024-04-21T20:53:22Z",
+        "error": null,
+        "period": 300,
+        "apdex_t": 1.0,
+        "string_match": "An alternative front-end to YouTube",
+        "enabled": true,
+        "published": true,
+        "disabled_locations": [],
+        "recipients": ["email:2371453714"],
+        "last_check_at": "2024-04-22T23:26:34Z",
+        "next_check_at": "2024-04-22T23:31:34Z",
+        "created_at": "2024-04-21T20:53:16Z",
+        "mute_until": "forever",
+        "favicon_url": "https://iv.nboeck.de/favicon-16x16.png?v=b673695",
+        "custom_headers": {},
+        "http_verb": "GET/HEAD",
+        "http_body": "",
+        "ssl": {
+          "tested_at": "2024-04-22T23:21:39Z",
+          "expires_at": "2024-06-18T08:56:40Z",
+          "valid": true,
+          "error": null
+        }
+      }
+    }
+  ],
+  [
+    "invidious.protokolla.fi",
+    {
+      "flag": "🇩🇪",
+      "region": "DE",
+      "stats": {
+        "version": "2.0",
+        "software": {
+          "name": "invidious",
+          "version": "2024.04.10-b673695",
+          "branch": "master"
+        },
+        "openRegistrations": true,
+        "usage": {
+          "users": { "total": 1832, "activeHalfyear": 1042, "activeMonth": 129 }
+        },
+        "metadata": {
+          "updatedAt": 1713828614,
+          "lastChannelRefreshedAt": 1713826576
+        },
+        "playback": {
+          "totalRequests": 8,
+          "successfulRequests": 6,
+          "ratio": 0.75
+        }
+      },
+      "cors": true,
+      "api": true,
+      "type": "https",
+      "uri": "https://invidious.protokolla.fi",
+      "monitor": {
+        "token": "fl6e",
+        "url": "https://invidious.protokolla.fi",
+        "alias": "invidious.protokolla.fi",
+        "last_status": 200,
+        "uptime": 100.0,
+        "down": false,
+        "down_since": null,
+        "up_since": "2024-04-21T20:53:29Z",
+        "error": null,
+        "period": 300,
+        "apdex_t": 1.0,
+        "string_match": "An alternative front-end to YouTube",
+        "enabled": true,
+        "published": true,
+        "disabled_locations": [],
+        "recipients": ["email:2371453714"],
+        "last_check_at": "2024-04-22T23:26:27Z",
+        "next_check_at": "2024-04-22T23:31:26Z",
+        "created_at": "2024-04-21T20:53:23Z",
+        "mute_until": "forever",
+        "favicon_url": "https://invidious.protokolla.fi/favicon-16x16.png?v=b673695",
+        "custom_headers": {},
+        "http_verb": "GET/HEAD",
+        "http_body": "",
+        "ssl": {
+          "tested_at": "2024-04-22T23:21:28Z",
+          "expires_at": "2024-05-21T14:47:06Z",
+          "valid": true,
+          "error": null
+        }
+      }
+    }
+  ],
+  [
+    "yt.artemislena.eu",
+    {
+      "flag": "🇩🇪",
+      "region": "DE",
+      "stats": {
+        "version": "2.0",
+        "software": {
+          "name": "invidious",
+          "version": "2024.04.10-b673695",
+          "branch": "master"
+        },
+        "openRegistrations": false,
+        "usage": {
+          "users": { "total": 1585, "activeHalfyear": 43, "activeMonth": 0 }
+        },
+        "metadata": {
+          "updatedAt": 1713828004,
+          "lastChannelRefreshedAt": 1713783279
+        },
+        "playback": {}
+      },
+      "cors": true,
+      "api": true,
+      "type": "https",
+      "uri": "https://yt.artemislena.eu",
+      "monitor": {
+        "token": "bc69",
+        "url": "https://yt.artemislena.eu",
+        "alias": "yt.artemislena.eu",
+        "last_status": 200,
+        "uptime": 100.0,
+        "down": false,
+        "down_since": null,
+        "up_since": "2024-04-21T20:53:42Z",
+        "error": null,
+        "period": 300,
+        "apdex_t": 1.0,
+        "string_match": "An alternative front-end to YouTube",
+        "enabled": true,
+        "published": true,
+        "disabled_locations": [],
+        "recipients": ["email:2371453714"],
+        "last_check_at": "2024-04-22T23:26:48Z",
+        "next_check_at": "2024-04-22T23:31:46Z",
+        "created_at": "2024-04-21T20:53:36Z",
+        "mute_until": "forever",
+        "favicon_url": "https://yt.artemislena.eu/favicon-16x16.png?v=b673695",
+        "custom_headers": {},
+        "http_verb": "GET/HEAD",
+        "http_body": "",
+        "ssl": {
+          "tested_at": "2024-04-22T23:21:49Z",
+          "expires_at": "2024-06-17T06:14:20Z",
+          "valid": true,
+          "error": null
+        }
+      }
+    }
+  ],
+  [
+    "invidious.private.coffee",
+    {
+      "flag": "🇦🇹",
+      "region": "AT",
+      "stats": {
+        "version": "2.0",
+        "software": {
+          "name": "invidious",
+          "version": "2024.03.31-08390acd",
+          "branch": "master"
+        },
+        "openRegistrations": true,
+        "usage": {
+          "users": { "total": 1221, "activeHalfyear": 963, "activeMonth": 315 }
+        },
+        "metadata": {
+          "updatedAt": 1713828338,
+          "lastChannelRefreshedAt": 1713828324
+        },
+        "playback": {
+          "totalRequests": 677,
+          "successfulRequests": 129,
+          "ratio": 0.19
+        }
+      },
+      "cors": true,
+      "api": true,
+      "type": "https",
+      "uri": "https://invidious.private.coffee",
+      "monitor": {
+        "token": "soor",
+        "url": "https://invidious.private.coffee",
+        "alias": "invidious.private.coffee",
+        "last_status": 200,
+        "uptime": 99.755,
+        "down": false,
+        "down_since": null,
+        "up_since": "2024-04-22T23:08:44Z",
+        "error": null,
+        "period": 300,
+        "apdex_t": 1.0,
+        "string_match": "An alternative front-end to YouTube",
+        "enabled": true,
+        "published": true,
+        "disabled_locations": [],
+        "recipients": ["email:2371453714"],
+        "last_check_at": "2024-04-22T23:28:39Z",
+        "next_check_at": "2024-04-22T23:33:37Z",
+        "created_at": "2024-04-21T20:53:45Z",
+        "mute_until": "forever",
+        "favicon_url": "https://invidious.private.coffee/favicon-16x16.png?v=e0ce59d3",
+        "custom_headers": {},
+        "http_verb": "GET/HEAD",
+        "http_body": "",
+        "ssl": {
+          "tested_at": "2024-04-22T22:46:26Z",
+          "expires_at": "2024-06-25T15:13:34Z",
+          "valid": true,
+          "error": null
+        }
+      }
+    }
+  ],
+  [
+    "inv.us.projectsegfau.lt",
+    {
+      "flag": "🇺🇸",
+      "region": "US",
+      "stats": {
+        "version": "2.0",
+        "software": {
+          "name": "invidious",
+          "version": "2024.04.10-b673695",
+          "branch": "master"
+        },
+        "openRegistrations": true,
+        "usage": {
+          "users": { "total": 1064, "activeHalfyear": 834, "activeMonth": 93 }
+        },
+        "metadata": {
+          "updatedAt": 1713828057,
+          "lastChannelRefreshedAt": 1713827493
+        },
+        "playback": {}
+      },
+      "cors": true,
+      "api": true,
+      "type": "https",
+      "uri": "https://inv.us.projectsegfau.lt",
+      "monitor": {
+        "token": "iydi",
+        "url": "https://inv.us.projectsegfau.lt",
+        "alias": "inv.us.projectsegfau.lt",
+        "last_status": null,
+        "uptime": 100.0,
+        "down": true,
+        "down_since": "2024-04-21T22:23:47Z",
+        "up_since": null,
+        "error": "Connection timeout (10 seconds)",
+        "period": 300,
+        "apdex_t": 1.0,
+        "string_match": "An alternative front-end to YouTube",
+        "enabled": true,
+        "published": true,
+        "disabled_locations": [],
+        "recipients": ["email:2371453714"],
+        "last_check_at": "2024-04-22T23:28:14Z",
+        "next_check_at": "2024-04-22T23:33:13Z",
+        "created_at": "2024-04-21T20:54:00Z",
+        "mute_until": "forever",
+        "favicon_url": "https://inv.us.projectsegfau.lt/favicon-16x16.png?v=b673695",
+        "custom_headers": {},
+        "http_verb": "GET/HEAD",
+        "http_body": "",
+        "ssl": {
+          "tested_at": "2024-04-21T22:18:50Z",
+          "expires_at": "2024-07-11T13:40:31Z",
+          "valid": true,
+          "error": null
+        }
+      }
+    }
+  ],
+  [
+    "invidious.perennialte.ch",
+    {
+      "flag": "🇦🇺",
+      "region": "AU",
+      "stats": {
+        "version": "2.0",
+        "software": {
+          "name": "invidious",
+          "version": "2024.04.14-cbd6916",
+          "branch": "master"
+        },
+        "openRegistrations": true,
+        "usage": {
+          "users": { "total": 1040, "activeHalfyear": 899, "activeMonth": 157 }
+        },
+        "metadata": {
+          "updatedAt": 1713828606,
+          "lastChannelRefreshedAt": 1713820441
+        },
+        "playback": {}
+      },
+      "cors": true,
+      "api": true,
+      "type": "https",
+      "uri": "https://invidious.perennialte.ch",
+      "monitor": {
+        "token": "8uie",
+        "url": "https://invidious.perennialte.ch",
+        "alias": "invidious.perennialte.ch",
+        "last_status": 200,
+        "uptime": 100.0,
+        "down": false,
+        "down_since": null,
+        "up_since": "2024-04-21T20:54:12Z",
+        "error": null,
+        "period": 300,
+        "apdex_t": 1.0,
+        "string_match": "An alternative front-end to YouTube",
+        "enabled": true,
+        "published": true,
+        "disabled_locations": [],
+        "recipients": ["email:2371453714"],
+        "last_check_at": "2024-04-22T23:27:00Z",
+        "next_check_at": "2024-04-22T23:32:00Z",
+        "created_at": "2024-04-21T20:54:06Z",
+        "mute_until": "forever",
+        "favicon_url": "https://invidious.perennialte.ch/favicon-16x16.png?v=cbd6916",
+        "custom_headers": {},
+        "http_verb": "GET/HEAD",
+        "http_body": "",
+        "ssl": {
+          "tested_at": "2024-04-22T23:22:02Z",
+          "expires_at": "2024-06-05T11:36:16Z",
+          "valid": true,
+          "error": null
+        }
+      }
+    }
+  ],
+  [
+    "invidious.drgns.space",
+    {
+      "flag": "🇺🇸",
+      "region": "US",
+      "stats": {
+        "version": "2.0",
+        "software": {
+          "name": "invidious",
+          "version": "2024.04.10-b673695",
+          "branch": "master"
+        },
+        "openRegistrations": true,
+        "usage": {
+          "users": { "total": 917, "activeHalfyear": 917, "activeMonth": 329 }
+        },
+        "metadata": {
+          "updatedAt": 1713828603,
+          "lastChannelRefreshedAt": 1713825221
+        },
+        "playback": {
+          "totalRequests": 4,
+          "successfulRequests": 0,
+          "ratio": 0.0
+        }
+      },
+      "cors": true,
+      "api": true,
+      "type": "https",
+      "uri": "https://invidious.drgns.space",
+      "monitor": {
+        "token": "gc16",
+        "url": "https://invidious.drgns.space",
+        "alias": "invidious.drgns.space",
+        "last_status": 200,
+        "uptime": 100.0,
+        "down": false,
+        "down_since": null,
+        "up_since": "2024-04-21T20:54:18Z",
+        "error": null,
+        "period": 300,
+        "apdex_t": 1.0,
+        "string_match": "An alternative front-end to YouTube",
+        "enabled": true,
+        "published": true,
+        "disabled_locations": [],
+        "recipients": ["email:2371453714"],
+        "last_check_at": "2024-04-22T23:28:29Z",
+        "next_check_at": "2024-04-22T23:33:27Z",
+        "created_at": "2024-04-21T20:54:12Z",
+        "mute_until": "forever",
+        "favicon_url": "https://invidious.drgns.space/favicon-16x16.png?v=b673695",
+        "custom_headers": {},
+        "http_verb": "GET/HEAD",
+        "http_body": "",
+        "ssl": {
+          "tested_at": "2024-04-22T23:23:31Z",
+          "expires_at": "2024-06-05T00:09:08Z",
+          "valid": true,
+          "error": null
+        }
+      }
+    }
+  ],
+  [
+    "invidious.jing.rocks",
+    {
+      "flag": "🇯🇵",
+      "region": "JP",
+      "stats": {
+        "version": "2.0",
+        "software": {
+          "name": "invidious",
+          "version": "2024.03.31-08390acd",
+          "branch": "master"
+        },
+        "openRegistrations": true,
+        "usage": {
+          "users": { "total": 910, "activeHalfyear": 910, "activeMonth": 505 }
+        },
+        "metadata": {
+          "updatedAt": 1713828153,
+          "lastChannelRefreshedAt": 1713828153
+        },
+        "playback": {
+          "totalRequests": 117,
+          "successfulRequests": 116,
+          "ratio": 0.99
+        }
+      },
+      "cors": true,
+      "api": true,
+      "type": "https",
+      "uri": "https://invidious.jing.rocks",
+      "monitor": {
+        "token": "cfds",
+        "url": "https://invidious.jing.rocks",
+        "alias": "invidious.jing.rocks",
+        "last_status": 200,
+        "uptime": 99.955,
+        "down": false,
+        "down_since": null,
+        "up_since": "2024-04-22T15:37:10Z",
+        "error": null,
+        "period": 300,
+        "apdex_t": 1.0,
+        "string_match": "An alternative front-end to YouTube",
+        "enabled": true,
+        "published": true,
+        "disabled_locations": [],
+        "recipients": ["email:2371453714"],
+        "last_check_at": "2024-04-22T23:25:11Z",
+        "next_check_at": "2024-04-22T23:30:11Z",
+        "created_at": "2024-04-21T20:54:18Z",
+        "mute_until": "forever",
+        "favicon_url": "https://invidious.jing.rocks/favicon-16x16.png?v=e0ce59d3",
+        "custom_headers": {},
+        "http_verb": "GET/HEAD",
+        "http_body": "",
+        "ssl": {
+          "tested_at": "2024-04-22T23:10:18Z",
+          "expires_at": "2024-07-05T10:25:26Z",
+          "valid": true,
+          "error": null
+        }
+      }
+    }
+  ],
+  [
+    "invidious.einfachzocken.eu",
+    {
+      "flag": "🇩🇪",
+      "region": "DE",
+      "stats": {
+        "version": "2.0",
+        "software": {
+          "name": "invidious",
+          "version": "2024.04.10-b673695",
+          "branch": "master"
+        },
+        "openRegistrations": true,
+        "usage": {
+          "users": { "total": 679, "activeHalfyear": 622, "activeMonth": 83 }
+        },
+        "metadata": {
+          "updatedAt": 1713828318,
+          "lastChannelRefreshedAt": 1713824828
+        },
+        "playback": {
+          "totalRequests": 8,
+          "successfulRequests": 8,
+          "ratio": 1.0
+        }
+      },
+      "cors": true,
+      "api": true,
+      "type": "https",
+      "uri": "https://invidious.einfachzocken.eu",
+      "monitor": {
+        "token": "6s9r",
+        "url": "https://invidious.einfachzocken.eu",
+        "alias": "invidious.einfachzocken.eu",
+        "last_status": 200,
+        "uptime": 100.0,
+        "down": false,
+        "down_since": null,
+        "up_since": "2024-04-21T20:54:37Z",
+        "error": null,
+        "period": 300,
+        "apdex_t": 1.0,
+        "string_match": "An alternative front-end to YouTube",
+        "enabled": true,
+        "published": true,
+        "disabled_locations": [],
+        "recipients": ["email:2371453714"],
+        "last_check_at": "2024-04-22T23:28:09Z",
+        "next_check_at": "2024-04-22T23:33:06Z",
+        "created_at": "2024-04-21T20:54:31Z",
+        "mute_until": "forever",
+        "favicon_url": "https://invidious.einfachzocken.eu/favicon-16x16.png?v=b673695",
+        "custom_headers": {},
+        "http_verb": "GET/HEAD",
+        "http_body": "",
+        "ssl": {
+          "tested_at": "2024-04-22T23:23:12Z",
+          "expires_at": "2024-06-14T08:05:40Z",
+          "valid": true,
+          "error": null
+        }
+      }
+    }
+  ],
+  [
+    "inv.oikei.net",
+    {
+      "flag": "🇩🇪",
+      "region": "DE",
+      "stats": {
+        "version": "2.0",
+        "software": {
+          "name": "invidious",
+          "version": "2024.03.31-08390acd",
+          "branch": "master"
+        },
+        "openRegistrations": true,
+        "usage": {
+          "users": { "total": 317, "activeHalfyear": 317, "activeMonth": 288 }
+        },
+        "metadata": {
+          "updatedAt": 1713828214,
+          "lastChannelRefreshedAt": 1713828214
+        },
+        "playback": {
+          "totalRequests": 310,
+          "successfulRequests": 310,
+          "ratio": 1.0
+        }
+      },
+      "cors": true,
+      "api": true,
+      "type": "https",
+      "uri": "https://inv.oikei.net",
+      "monitor": {
+        "token": "1vmd",
+        "url": "https://inv.oikei.net",
+        "alias": "inv.oikei.net",
+        "last_status": 200,
+        "uptime": 99.911,
+        "down": false,
+        "down_since": null,
+        "up_since": "2024-04-22T17:46:38Z",
+        "error": null,
+        "period": 300,
+        "apdex_t": 1.0,
+        "string_match": "An alternative front-end to YouTube",
+        "enabled": true,
+        "published": true,
+        "disabled_locations": [],
+        "recipients": ["email:2371453714"],
+        "last_check_at": "2024-04-22T23:24:52Z",
+        "next_check_at": "2024-04-22T23:29:50Z",
+        "created_at": "2024-04-21T20:54:39Z",
+        "mute_until": "forever",
+        "favicon_url": "https://inv.oikei.net/favicon-16x16.png?v=e0ce59d3",
+        "custom_headers": {},
+        "http_verb": "GET/HEAD",
+        "http_body": "",
+        "ssl": {
+          "tested_at": "2024-04-22T23:09:59Z",
+          "expires_at": "2024-06-16T15:06:11Z",
+          "valid": true,
+          "error": null
+        }
+      }
+    }
+  ],
+  [
+    "vid.lilay.dev",
+    {
+      "flag": "🇸🇬",
+      "region": "SG",
+      "stats": {
+        "version": "2.0",
+        "software": {
+          "name": "invidious",
+          "version": "2024.04.10-b673695",
+          "branch": "master"
+        },
+        "openRegistrations": true,
+        "usage": {
+          "users": { "total": 253, "activeHalfyear": 253, "activeMonth": 163 }
+        },
+        "metadata": {
+          "updatedAt": 1713828129,
+          "lastChannelRefreshedAt": 1713828129
+        },
+        "playback": {
+          "totalRequests": 917,
+          "successfulRequests": 917,
+          "ratio": 1.0
+        }
+      },
+      "cors": true,
+      "api": true,
+      "type": "https",
+      "uri": "https://vid.lilay.dev",
+      "monitor": {
+        "token": "b5ex",
+        "url": "https://vid.lilay.dev",
+        "alias": "vid.lilay.dev",
+        "last_status": 200,
+        "uptime": 100.0,
+        "down": false,
+        "down_since": null,
+        "up_since": "2024-04-22T19:04:33Z",
+        "error": null,
+        "period": 300,
+        "apdex_t": 1.0,
+        "string_match": "An alternative front-end to YouTube",
+        "enabled": true,
+        "published": true,
+        "disabled_locations": [],
+        "recipients": ["email:2371453714"],
+        "last_check_at": "2024-04-22T23:28:22Z",
+        "next_check_at": "2024-04-22T23:33:20Z",
+        "created_at": "2024-04-21T20:54:49Z",
+        "mute_until": "forever",
+        "favicon_url": "https://vid.lilay.dev/favicon-16x16.png?v=b673695",
+        "custom_headers": {},
+        "http_verb": "GET/HEAD",
+        "http_body": "",
+        "ssl": {
+          "tested_at": "2024-04-22T23:18:24Z",
+          "expires_at": "2024-07-09T11:37:12Z",
+          "valid": true,
+          "error": null
+        }
+      }
+    }
+  ],
+  [
+    "iv.datura.network",
+    {
+      "flag": "🇫🇮",
+      "region": "FI",
+      "stats": {
+        "version": "2.0",
+        "software": {
+          "name": "invidious",
+          "version": "2024.04.10-b673695",
+          "branch": "master"
+        },
+        "openRegistrations": true,
+        "usage": {
+          "users": { "total": 136, "activeHalfyear": 136, "activeMonth": 136 }
+        },
+        "metadata": {
+          "updatedAt": 1713828121,
+          "lastChannelRefreshedAt": 1713828121
+        },
+        "playback": {}
+      },
+      "cors": true,
+      "api": true,
+      "type": "https",
+      "uri": "https://iv.datura.network",
+      "monitor": {
+        "token": "2juu",
+        "url": "https://iv.datura.network",
+        "alias": "iv.datura.network",
+        "last_status": 200,
+        "uptime": 100.0,
+        "down": false,
+        "down_since": null,
+        "up_since": "2024-04-21T20:55:03Z",
+        "error": null,
+        "period": 300,
+        "apdex_t": 1.0,
+        "string_match": "An alternative front-end to YouTube",
+        "enabled": true,
+        "published": true,
+        "disabled_locations": [],
+        "recipients": ["email:2371453714"],
+        "last_check_at": "2024-04-22T23:28:03Z",
+        "next_check_at": "2024-04-22T23:33:02Z",
+        "created_at": "2024-04-21T20:54:57Z",
+        "mute_until": "forever",
+        "favicon_url": "https://iv.datura.network/favicon-16x16.png?v=b673695",
+        "custom_headers": {},
+        "http_verb": "GET/HEAD",
+        "http_body": "",
+        "ssl": {
+          "tested_at": "2024-04-22T23:23:04Z",
+          "expires_at": "2024-05-21T10:35:24Z",
+          "valid": true,
+          "error": null
+        }
+      }
+    }
+  ],
+  [
+    "yt.drgnz.club",
+    {
+      "flag": "🇨🇿",
+      "region": "CZ",
+      "stats": {
+        "version": "2.0",
+        "software": {
+          "name": "invidious",
+          "version": "2024.03.31-08390acd",
+          "branch": "master"
+        },
+        "openRegistrations": false,
+        "usage": {
+          "users": { "total": 2, "activeHalfyear": 2, "activeMonth": 2 }
+        },
+        "metadata": {
+          "updatedAt": 1713828602,
+          "lastChannelRefreshedAt": 1713826803
+        },
+        "playback": {}
+      },
+      "cors": true,
+      "api": true,
+      "type": "https",
+      "uri": "https://yt.drgnz.club",
+      "monitor": {
+        "token": "cvoa",
+        "url": "https://yt.drgnz.club",
+        "alias": "yt.drgnz.club",
+        "last_status": 200,
+        "uptime": 100.0,
+        "down": false,
+        "down_since": null,
+        "up_since": "2024-04-21T20:55:11Z",
+        "error": null,
+        "period": 300,
+        "apdex_t": 1.0,
+        "string_match": "An alternative front-end to YouTube",
+        "enabled": true,
+        "published": true,
+        "disabled_locations": [],
+        "recipients": ["email:2371453714"],
+        "last_check_at": "2024-04-22T23:29:05Z",
+        "next_check_at": "2024-04-22T23:34:04Z",
+        "created_at": "2024-04-21T20:55:05Z",
+        "mute_until": "forever",
+        "favicon_url": "https://yt.drgnz.club/favicon-16x16.png?v=e0ce59d3",
+        "custom_headers": {},
+        "http_verb": "GET/HEAD",
+        "http_body": "",
+        "ssl": {
+          "tested_at": "2024-04-22T23:24:09Z",
+          "expires_at": "2024-06-02T18:40:36Z",
+          "valid": true,
+          "error": null
+        }
+      }
+    }
+  ],
+  [
+    "yewtu.be",
+    {
+      "flag": "🇩🇪",
+      "region": "DE",
+      "stats": {
+        "version": "2.0",
+        "software": {
+          "name": "invidious",
+          "version": "2024.04.22-593f00a",
+          "branch": "master"
+        },
+        "openRegistrations": false,
+        "usage": {
+          "users": { "total": 1, "activeHalfyear": 0, "activeMonth": 0 }
+        },
+        "metadata": {
+          "updatedAt": 1713828011,
+          "lastChannelRefreshedAt": 1713826897
+        },
+        "playback": {}
+      },
+      "cors": false,
+      "api": false,
+      "type": "https",
+      "uri": "https://yewtu.be",
+      "monitor": {
+        "token": "0h16",
+        "url": "https://yewtu.be/",
+        "alias": "yewtu.be",
+        "last_status": 200,
+        "uptime": 93.23,
+        "down": false,
+        "down_since": null,
+        "up_since": "2024-04-22T15:03:41Z",
+        "error": null,
+        "period": 300,
+        "apdex_t": 1.0,
+        "string_match": "An alternative front-end to YouTube",
+        "enabled": true,
+        "published": true,
+        "disabled_locations": [],
+        "recipients": [],
+        "last_check_at": "2024-04-22T23:26:34Z",
+        "next_check_at": "2024-04-22T23:31:32Z",
+        "created_at": "2024-04-02T14:07:44Z",
+        "mute_until": null,
+        "favicon_url": "https://yewtu.be/favicon-16x16.png?v=c996b11",
+        "custom_headers": {},
+        "http_verb": "GET/HEAD",
+        "http_body": "",
+        "ssl": {
+          "tested_at": "2024-04-22T22:56:40Z",
+          "expires_at": "2024-07-01T21:59:00Z",
+          "valid": true,
+          "error": null
+        }
+      }
+    }
+  ],
+  [
+    "yt.cdaut.de",
+    {
+      "flag": "🇩🇪",
+      "region": "DE",
+      "stats": {
+        "version": "2.0",
+        "software": {
+          "name": "invidious",
+          "version": "2024.04.10-b673695",
+          "branch": "master"
+        },
+        "openRegistrations": false,
+        "usage": {
+          "users": { "total": 1, "activeHalfyear": 1, "activeMonth": 0 }
+        },
+        "metadata": {
+          "updatedAt": 1713828617,
+          "lastChannelRefreshedAt": 1713826889
+        },
+        "playback": {
+          "totalRequests": 165,
+          "successfulRequests": 165,
+          "ratio": 1.0
+        }
+      },
+      "cors": true,
+      "api": true,
+      "type": "https",
+      "uri": "https://yt.cdaut.de",
+      "monitor": {
+        "token": "swka",
+        "url": "https://yt.cdaut.de",
+        "alias": "yt.cdaut.de",
+        "last_status": 200,
+        "uptime": 100.0,
+        "down": false,
+        "down_since": null,
+        "up_since": "2024-04-22T21:37:07Z",
+        "error": null,
+        "period": 300,
+        "apdex_t": 1.0,
+        "string_match": "An alternative front-end to YouTube",
+        "enabled": true,
+        "published": true,
+        "disabled_locations": [],
+        "recipients": ["email:2371453714"],
+        "last_check_at": "2024-04-22T23:26:53Z",
+        "next_check_at": "2024-04-22T23:31:52Z",
+        "created_at": "2024-04-21T20:55:10Z",
+        "mute_until": "forever",
+        "favicon_url": "https://yt.cdaut.de/favicon-16x16.png?v=b673695",
+        "custom_headers": {},
+        "http_verb": "GET/HEAD",
+        "http_body": "",
+        "ssl": {
+          "tested_at": "2024-04-22T23:21:56Z",
+          "expires_at": "2024-07-18T06:44:40Z",
+          "valid": true,
+          "error": null
+        }
+      }
+    }
+  ],
+  [
+    "invidious.flokinet.to",
+    {
+      "flag": "🇷🇴",
+      "region": "RO",
+      "stats": null,
+      "cors": false,
+      "api": false,
+      "type": "https",
+      "uri": "https://invidious.flokinet.to",
+      "monitor": {
+        "token": "effg",
+        "url": "https://invidious.flokinet.to",
+        "alias": "invidious.flokinet.to",
+        "last_status": 200,
+        "uptime": 99.955,
+        "down": false,
+        "down_since": null,
+        "up_since": "2024-04-22T22:47:58Z",
+        "error": null,
+        "period": 300,
+        "apdex_t": 1.0,
+        "string_match": "An alternative front-end to YouTube",
+        "enabled": true,
+        "published": true,
+        "disabled_locations": [],
+        "recipients": ["email:2371453714"],
+        "last_check_at": "2024-04-22T23:27:53Z",
+        "next_check_at": "2024-04-22T23:32:50Z",
+        "created_at": "2024-04-21T20:52:37Z",
+        "mute_until": "forever",
+        "favicon_url": "https://invidious.flokinet.to/favicon-16x16.png?v=e0ce59d3",
+        "custom_headers": {},
+        "http_verb": "GET/HEAD",
+        "http_body": "",
+        "ssl": {
+          "tested_at": "2024-04-22T23:07:53Z",
+          "expires_at": "2024-05-23T21:05:10Z",
+          "valid": true,
+          "error": null
+        }
+      }
+    }
+  ],
+  [
+    "iv.melmac.space",
+    {
+      "flag": "🇩🇪",
+      "region": "DE",
+      "stats": {
+        "version": "2.0",
+        "software": {
+          "name": "invidious",
+          "version": "2024.04.10-b673695a",
+          "branch": "master"
+        },
+        "openRegistrations": false,
+        "usage": {
+          "users": { "total": 0, "activeHalfyear": 0, "activeMonth": 0 }
+        },
+        "metadata": { "updatedAt": 1713828604, "lastChannelRefreshedAt": 0 },
+        "playback": {
+          "totalRequests": 36,
+          "successfulRequests": 0,
+          "ratio": 0.0
+        }
+      },
+      "cors": true,
+      "api": true,
+      "type": "https",
+      "uri": "https://iv.melmac.space",
+      "monitor": {
+        "token": "bgpj",
+        "url": "https://iv.melmac.space",
+        "alias": "iv.melmac.space",
+        "last_status": 200,
+        "uptime": 100.0,
+        "down": false,
+        "down_since": null,
+        "up_since": "2024-04-21T20:55:24Z",
+        "error": null,
+        "period": 300,
+        "apdex_t": 1.0,
+        "string_match": "An alternative front-end to YouTube",
+        "enabled": true,
+        "published": true,
+        "disabled_locations": [],
+        "recipients": ["email:2371453714"],
+        "last_check_at": "2024-04-22T23:28:18Z",
+        "next_check_at": "2024-04-22T23:33:16Z",
+        "created_at": "2024-04-21T20:55:18Z",
+        "mute_until": "forever",
+        "favicon_url": "https://iv.melmac.space/favicon-16x16.png?v=e0ce59d3",
+        "custom_headers": {},
+        "http_verb": "GET/HEAD",
+        "http_body": "",
+        "ssl": {
+          "tested_at": "2024-04-22T23:23:19Z",
+          "expires_at": "2024-05-16T06:19:41Z",
+          "valid": true,
+          "error": null
+        }
+      }
+    }
+  ],
+  [
+    "invidious.privacyredirect.com",
+    {
+      "flag": "🇫🇮",
+      "region": "FI",
+      "stats": {
+        "version": "2.0",
+        "software": {
+          "name": "invidious",
+          "version": "2024.04.10-b673695",
+          "branch": "master"
+        },
+        "openRegistrations": false,
+        "usage": {
+          "users": { "total": 0, "activeHalfyear": 0, "activeMonth": 0 }
+        },
+        "metadata": { "updatedAt": 1713828602, "lastChannelRefreshedAt": 0 },
+        "playback": {}
+      },
+      "cors": true,
+      "api": true,
+      "type": "https",
+      "uri": "https://invidious.privacyredirect.com",
+      "monitor": {
+        "token": "xo2t",
+        "url": "https://invidious.privacyredirect.com",
+        "alias": "invidious.privacyredirect.com",
+        "last_status": 200,
+        "uptime": 100.0,
+        "down": false,
+        "down_since": null,
+        "up_since": "2024-04-21T20:55:38Z",
+        "error": null,
+        "period": 300,
+        "apdex_t": 1.0,
+        "string_match": "An alternative front-end to YouTube",
+        "enabled": true,
+        "published": true,
+        "disabled_locations": [],
+        "recipients": ["email:2371453714"],
+        "last_check_at": "2024-04-22T23:29:21Z",
+        "next_check_at": "2024-04-22T23:34:18Z",
+        "created_at": "2024-04-21T20:55:32Z",
+        "mute_until": "forever",
+        "favicon_url": "https://invidious.privacyredirect.com/favicon-16x16.png?v=b673695",
+        "custom_headers": {},
+        "http_verb": "GET/HEAD",
+        "http_body": "",
+        "ssl": {
+          "tested_at": "2024-04-22T23:24:25Z",
+          "expires_at": "2024-07-17T15:08:43Z",
+          "valid": true,
+          "error": null
+        }
+      }
+    }
+  ],
+  [
+    "http://pjsfhqamc7k6htnumrvn4cwqqdoggeepj7u5viyimgnxg3gar72q.b32.i2p",
+    {
+      "flag": "🇫🇷",
+      "region": "FR",
+      "stats": null,
+      "cors": null,
+      "api": null,
+      "type": "i2p",
+      "uri": "http://pjsfhqamc7k6htnumrvn4cwqqdoggeepj7u5viyimgnxg3gar72q.b32.i2p",
+      "monitor": null
+    }
+  ],
+  [
+    "http://pjsfi2szfkb4guqzmfmlyq4no46fayertjrwt4h2uughccrh2lvq.b32.i2p",
+    {
+      "flag": "🇱🇺",
+      "region": "LU",
+      "stats": null,
+      "cors": null,
+      "api": null,
+      "type": "i2p",
+      "uri": "http://pjsfi2szfkb4guqzmfmlyq4no46fayertjrwt4h2uughccrh2lvq.b32.i2p",
+      "monitor": null
+    }
+  ],
+  [
+    "zzlsbhhfvwg3oh36tcvx4r7n6jrw7zibvyvfxqlodcwn3mfrvzuq.b32.i2p",
+    {
+      "flag": "🇨🇱",
+      "region": "CL",
+      "stats": null,
+      "cors": null,
+      "api": null,
+      "type": "i2p",
+      "uri": "http://zzlsbhhfvwg3oh36tcvx4r7n6jrw7zibvyvfxqlodcwn3mfrvzuq.b32.i2p",
+      "monitor": null
+    }
+  ],
+  [
+    "grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion",
+    {
+      "flag": "🇺🇸",
+      "region": "US",
+      "stats": null,
+      "cors": null,
+      "api": null,
+      "type": "onion",
+      "uri": "http://grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion",
+      "monitor": null
+    }
+  ],
+  [
+    "ng27owmagn5amdm7l5s3rsqxwscl5ynppnis5dqcasogkyxcfqn7psid.onion",
+    {
+      "flag": "🇩🇪",
+      "region": "DE",
+      "stats": null,
+      "cors": null,
+      "api": null,
+      "type": "onion",
+      "uri": "http://ng27owmagn5amdm7l5s3rsqxwscl5ynppnis5dqcasogkyxcfqn7psid.onion",
+      "monitor": null
+    }
+  ],
+  [
+    "invidious.g4c3eya4clenolymqbpgwz3q3tawoxw56yhzk4vugqrl6dtu3ejvhjid.onion",
+    {
+      "flag": "🇫🇷",
+      "region": "FR",
+      "stats": null,
+      "cors": null,
+      "api": null,
+      "type": "onion",
+      "uri": "http://invidious.g4c3eya4clenolymqbpgwz3q3tawoxw56yhzk4vugqrl6dtu3ejvhjid.onion",
+      "monitor": null
+    }
+  ],
+  [
+    "inv.pjsfkvpxlinjamtawaksbnnaqs2fc2mtvmozrzckxh7f3kis6yea25ad.onion",
+    {
+      "flag": "🇩🇪",
+      "region": "DE",
+      "stats": null,
+      "cors": null,
+      "api": null,
+      "type": "onion",
+      "uri": "http://inv.pjsfkvpxlinjamtawaksbnnaqs2fc2mtvmozrzckxh7f3kis6yea25ad.onion",
+      "monitor": null
+    }
+  ],
+  [
+    "inv.nadekonw7plitnjuawu6ytjsl7jlglk2t6pyq6eftptmiv3dvqndwvyd.onion",
+    {
+      "flag": "🇨🇱",
+      "region": "CL",
+      "stats": null,
+      "cors": null,
+      "api": null,
+      "type": "onion",
+      "uri": "http://inv.nadekonw7plitnjuawu6ytjsl7jlglk2t6pyq6eftptmiv3dvqndwvyd.onion",
+      "monitor": null
+    }
+  ],
+  [
+    "nerdvpneaggggfdiurknszkbmhvjndks5z5k3g5yp4nhphflh3n3boad.onion",
+    {
+      "flag": "🇺🇦",
+      "region": "UA",
+      "stats": null,
+      "cors": null,
+      "api": null,
+      "type": "onion",
+      "uri": "http://nerdvpneaggggfdiurknszkbmhvjndks5z5k3g5yp4nhphflh3n3boad.onion",
+      "monitor": null
+    }
+  ]
+]
