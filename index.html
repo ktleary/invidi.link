@@ -171,9 +171,12 @@ function parseInput(raw) {
 
   if (YouTubeHosts.test(host)) {
     // youtube.com/watch?v=ID | youtu.be/ID | /shorts/ID | /embed/ID | /live/ID
-    const v = url.searchParams.get('v');
+    // v is case-insensitive in the wild (V= happens); never mistake a path word like
+    // "watch" for an ID
+    let v = url.searchParams.get('v') ?? url.searchParams.get('V');
     const m = url.pathname.match(/^\/(?:shorts|embed|live)\/([\w-]{5,})/) ||
-              (host === 'youtu.be' && url.pathname.match(/^\/([\w-]{5,})/));
+              (host === 'youtu.be' && !/^\/watch\/?$/.test(url.pathname) &&
+               url.pathname.match(/^\/([\w-]{5,})/));
     const id = (v && /^[\w-]{5,}$/.test(v)) ? v : (m && m[1]);
     if (!id) return { error: 'Could not find a video ID in that YouTube URL.' };
     // preserve any extra params (t=, list=, …); ensure v= leads
@@ -277,8 +280,14 @@ $('results').addEventListener('click', async (e) => {
 
 // ---- boot: prefill from ?url= and auto-convert ----
 (() => {
-  const q = new URLSearchParams(window.location.search).get('url');
-  if (q) { $('url').value = q; convert(); }
+  // take everything after "url=" raw, then decode once — URLSearchParams would truncate
+  // the value at the first "&" of the embedded URL
+  const m = window.location.search.match(/[?&]url=([^#]+)/);
+  if (!m) return;
+  let q = m[1];
+  try { q = decodeURIComponent(q); } catch { /* already plain */ }
+  $('url').value = q;
+  convert();
 })();
 </script>
 </body>
