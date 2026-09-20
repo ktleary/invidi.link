@@ -174,10 +174,13 @@ function parseInput(raw) {
     // v is case-insensitive in the wild (V= happens); never mistake a path word like
     // "watch" for an ID
     let v = url.searchParams.get('v') ?? url.searchParams.get('V');
-    const m = url.pathname.match(/^\/(?:shorts|embed|live)\/([\w-]{5,})/) ||
+    // ID charset is [A-Za-z0-9_-]; accept any length (older/shortened IDs exist) and let
+    // the destination instance decide validity
+    const isId = (x) => /^[\w-]+$/.test(x ?? '');
+    const m = url.pathname.match(/^\/(?:shorts|embed|live)\/([\w-]+)$/) ||
               (host === 'youtu.be' && !/^\/watch\/?$/.test(url.pathname) &&
-               url.pathname.match(/^\/([\w-]{5,})/));
-    const id = (v && /^[\w-]{5,}$/.test(v)) ? v : (m && m[1]);
+               url.pathname.match(/^\/([\w-]+)$/));
+    const id = isId(v) ? v : (m && m[1]);
     if (!id) return { error: 'Could not find a video ID in that YouTube URL.' };
     // preserve any extra params (t=, list=, …); ensure v= leads
     const rest = new URLSearchParams(url.searchParams);
