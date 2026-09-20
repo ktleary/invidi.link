@@ -25,6 +25,7 @@ instance API (which never sees your video URL — only your IP fetching the inst
 
 Static file. `index.html` is the entire app — the served file *is* the source.
 
-Deploy on Gaudi: rsync the repo (minus `.git`) into `/var/www/invidi.link/`.
-`.github/workflows/deploy.yml` deploys on push to `master` (requires the `SSH_HOST`,
-`SSH_USER`, `SSH_PRIVATE_KEY` repo secrets).
+Deploy from mesh9: fetch the repo at `main`/`master`, rsync (minus `.git`) into
+`/var/www/invidi.link/` on Gaudi as `deploy`, then verify `https://invidi.link/` returns 200.
+Use the shared mesh9 deploy script (`deploy-static-site.sh`) — no GitHub-held SSH keys,
+no Actions.
